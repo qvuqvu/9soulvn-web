@@ -4642,8 +4642,10 @@ fieldset:disabled .btn {
 .nav-link {
     display: block;
     padding: .5rem 2rem;
-    color: #18bc9c;
-    text-decoration: none;
+    text-decoration-color: #E52521;
+    text-underline-offset: 6px;
+    text-decoration: underline;
+    text-decoration: transparent;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out
 }
 
@@ -4655,7 +4657,10 @@ fieldset:disabled .btn {
 
 .nav-link:focus,
 .nav-link:hover {
-    color: #13967d
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #E52521;
+    text-underline-offset: 6px;
 }
 
 .nav-link.disabled {
@@ -5298,7 +5303,7 @@ fieldset:disabled .btn {
 
 .navbar-light .navbar-brand:focus,
 .navbar-light .navbar-brand:hover {
-    color: rgba(0, 0, 0, .9)
+    color: #FFFFFF
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -5307,7 +5312,7 @@ fieldset:disabled .btn {
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-    color: rgba(0, 0, 0, .7)
+    color: #FFFFFF
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {
@@ -5316,7 +5321,7 @@ fieldset:disabled .btn {
 
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .show>.nav-link {
-    color: rgba(0, 0, 0, .9)
+    color: #FFFFFF
 }
 
 .navbar-light .navbar-toggler {
@@ -5329,7 +5334,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-light .navbar-text {
-    color: rgba(0, 0, 0, .55)
+    color: #FFFFFF
 }
 
 .navbar-light .navbar-text a,
@@ -5353,7 +5358,7 @@ fieldset:disabled .btn {
 
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: #2C2C2C
+    color: #FFFFFF
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
@@ -5362,7 +5367,7 @@ fieldset:disabled .btn {
 
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .show>.nav-link {
-    color: #2C2C2C
+    color: #FFFFFF
 }
 
 .navbar-dark .navbar-toggler {
@@ -5381,7 +5386,7 @@ fieldset:disabled .btn {
 .navbar-dark .navbar-text a,
 .navbar-dark .navbar-text a:focus,
 .navbar-dark .navbar-text a:hover {
-    color: #2C2C2C
+    color: #FFFFFF
 }
 
 .card {
@@ -12805,9 +12810,11 @@ fieldset:disabled .btn {
 
 .bg-primary .navbar-nav .nav-link.active,
 .bg-primary .navbar-nav .nav-link:focus,
-.bg-primary .navbar-nav .nav-link:hover,
+
 .bg-primary .navbar-nav .show>.nav-link {
-    color: #18bc9c !important
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #E52521;
 }
 
 .nav-tabs .nav-item.open .nav-link,
@@ -12816,7 +12823,7 @@ fieldset:disabled .btn {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link.active:focus,
 .nav-tabs .nav-link.active:hover {
-    color: #2C2C2C
+    color: #FFFFFF;
 }
 
 .pagination a:hover {

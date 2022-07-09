@@ -25,6 +25,7 @@ import ErrorPage from './pages/ErrorPage';
 
 // for showing the 'new update available' banner and to register the service worker
 import ServiceWorkerWrapper from './ServiceWorkerWrapper';
+import Gifting from './pages/GiftingPage';
 
 const App = () => {
 	return (
@@ -57,6 +58,7 @@ const App = () => {
 							path='/user/password/reset/:token'
 							component={PasswordResetPage}
 						/>
+						<Route path='/gifting' component={Gifting} />
 						<Route path='/profile' component={ProfilePage} />
 						<Route path='/product/:id' component={ProductPage} />
 						<Route path='/cart/:id?' component={CartPage} />
