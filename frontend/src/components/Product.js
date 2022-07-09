@@ -20,9 +20,9 @@ const Product = ({ product }) => {
 			<Card.Body>
 				<Link
 					to={`/product/${product._id}`}
-					style={{ color: 'dimgray', textDecoration: 'none' }}>
-					<Card.Title className='product-title' as='p'>
-						<strong>{product.name}</strong>
+					style={{  textDecoration: 'none' }}>
+					<Card.Title className='product-title' as='body'>
+						{product.name}
 					</Card.Title>
 				</Link>
 
@@ -42,7 +42,7 @@ const Product = ({ product }) => {
 						product.price.toLocaleString('en-IN', {
 							maximumFractionDigits: 2,
 							style: 'currency',
-							currency: 'INR',
+							currency: 'vnd',
 						})}
 				</Card.Text>
 			</Card.Body>

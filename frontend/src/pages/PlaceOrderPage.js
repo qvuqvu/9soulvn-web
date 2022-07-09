@@ -137,7 +137,7 @@ const PlaceOrderPage = ({ history }) => {
 																	maximumFractionDigits: 2,
 																	style: 'currency',
 																	currency:
-																		'INR',
+																		'vnd',
 																}
 															)}
 														</Col>
@@ -170,7 +170,7 @@ const PlaceOrderPage = ({ history }) => {
 												).toLocaleString('en-IN', {
 													maximumFractionDigits: 2,
 													style: 'currency',
-													currency: 'INR',
+													currency: 'vnd',
 												})}
 											</Col>
 										</Row>
@@ -186,7 +186,7 @@ const PlaceOrderPage = ({ history }) => {
 												).toLocaleString('en-IN', {
 													maximumFractionDigits: 2,
 													style: 'currency',
-													currency: 'INR',
+													currency: 'vnd',
 												})}
 											</Col>
 										</Row>
@@ -202,7 +202,7 @@ const PlaceOrderPage = ({ history }) => {
 												).toLocaleString('en-IN', {
 													maximumFractionDigits: 2,
 													style: 'currency',
-													currency: 'INR',
+													currency: 'vnd',
 												})}
 											</Col>
 										</Row>
@@ -218,7 +218,7 @@ const PlaceOrderPage = ({ history }) => {
 												).toLocaleString('en-IN', {
 													maximumFractionDigits: 2,
 													style: 'currency',
-													currency: 'INR',
+													currency: 'vnd',
 												})}
 											</Col>
 										</Row>

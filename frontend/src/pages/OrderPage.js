@@ -219,7 +219,7 @@ const OrderPage = ({ match, history }) => {
 																		maximumFractionDigits: 2,
 																		style: 'currency',
 																		currency:
-																			'INR',
+																			'vnd',
 																	}
 																)}
 															</Col>
@@ -263,7 +263,7 @@ const OrderPage = ({ match, history }) => {
 													{
 														maximumFractionDigits: 2,
 														style: 'currency',
-														currency: 'INR',
+														currency: 'vnd',
 													}
 												)}
 											</Col>
@@ -280,7 +280,7 @@ const OrderPage = ({ match, history }) => {
 													{
 														maximumFractionDigits: 2,
 														style: 'currency',
-														currency: 'INR',
+														currency: 'vnd',
 													}
 												)}
 											</Col>
@@ -297,7 +297,7 @@ const OrderPage = ({ match, history }) => {
 													{
 														maximumFractionDigits: 2,
 														style: 'currency',
-														currency: 'INR',
+														currency: 'vnd',
 													}
 												)}
 											</Col>
@@ -314,7 +314,7 @@ const OrderPage = ({ match, history }) => {
 													{
 														maximumFractionDigits: 2,
 														style: 'currency',
-														currency: 'INR',
+														currency: 'vnd',
 													}
 												)}
 											</Col>
@@ -338,7 +338,7 @@ const OrderPage = ({ match, history }) => {
 																label: 'pay',
 															}}
 															currency='USD'
-															// converting INR to USD, as paypal cannot support INR
+															// converting vnd to USD, as paypal cannot support vnd
 															amount={Number(
 																order.totalPrice /
 																	72

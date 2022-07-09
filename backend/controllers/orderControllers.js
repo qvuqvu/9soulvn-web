@@ -155,7 +155,7 @@ const stripePayment = asyncHandler(async (req, res) => {
 	// https://stripe.com/docs/api/payment_intents
 	const paymentIntent = await stripe.paymentIntents.create({
 		amount: price,
-		currency: 'inr',
+		currency: 'vnd',
 		receipt_email: email,
 		payment_method_types: ['card'],
 	});

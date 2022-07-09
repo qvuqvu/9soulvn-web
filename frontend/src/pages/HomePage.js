@@ -81,7 +81,7 @@ const HomePage = ({ match, history }) => {
 	return (
 		<>
 			<Meta />
-			<div><Introduce/></div>
+			<div class="w-full"><Introduce/></div>
 			{/* display carousel only on larger screens */}
 			{/* {!keyword ? (
 				window.innerWidth > 430 && <ProductCarousel />

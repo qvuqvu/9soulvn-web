@@ -191,7 +191,7 @@ const ProductPage = ({ history, match }) => {
 										product.price.toLocaleString('en-IN', {
 											maximumFractionDigits: 2,
 											style: 'currency',
-											currency: 'INR',
+											currency: 'vnd',
 										})}
 								</ListGroup.Item>
 								<ListGroup.Item>
@@ -215,7 +215,7 @@ const ProductPage = ({ history, match }) => {
 														{
 															maximumFractionDigits: 2,
 															style: 'currency',
-															currency: 'INR',
+															currency: 'vnd',
 														}
 													)}
 											</Col>

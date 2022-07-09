@@ -515,7 +515,7 @@ const ProfilePage = ({ history }) => {
 													{
 														maximumFractionDigits: 0,
 														style: 'currency',
-														currency: 'INR',
+														currency: 'vnd',
 													}
 												)}
 											</td>
