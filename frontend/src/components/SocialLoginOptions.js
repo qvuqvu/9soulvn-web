@@ -7,7 +7,7 @@ import linkedinLogo from '../assets/linkedinLogo.png';
 import '../styles/social-login-option.css';
 
 const SocialLoginOptions = () => {
-	const baseURL = process.env.REACT_APP_BASE_URL;
+	const baseURL ="https://backend-9soulvn.herokuapp.com/";
 	// display a list of 4 options and make API request to passport login on click
 	return (
 		<div
@@ -41,7 +41,7 @@ const SocialLoginOptions = () => {
 						src={googleLogo}
 					/>
 				</a>
-				<a href={`${baseURL}api/auth/github`}>
+				{/* <a href={`${baseURL}api/auth/github`}>
 					<Image
 						rounded
 						style={{
@@ -73,7 +73,7 @@ const SocialLoginOptions = () => {
 						}}
 						src={linkedinLogo}
 					/>
-				</a>
+				</a> */}
 			</Card.Body>
 		</div>
 	);

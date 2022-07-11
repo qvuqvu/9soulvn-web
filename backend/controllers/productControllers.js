@@ -7,7 +7,7 @@ import Product from '../models/productModel.js';
 const getAllProducts = asyncHandler(async (req, res) => {
 	const page = Number(req.query.pageNumber) || 1; // the current page number being fetched
 	const pageSize = Number(req.query.pageSize) || 10; // the total number of entries on a single page
-
+	
 	// match all products which include the string of chars in the keyword, not necessarily in the given order
 	const keyword = req.query.keyword
 		? {

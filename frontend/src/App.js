@@ -36,7 +36,7 @@ const App = () => {
 			<main className='py-2'>
 				<Container>
 					<Switch>
-						<Route path='/' component={HomePage} exact />
+						<Route path='/home' component={HomePage} exact />
 						<Route
 							path='/search/:keyword'
 							component={HomePage}
@@ -67,6 +67,7 @@ const App = () => {
 							component={ConfirmPage}
 							exact
 						/>
+						<Route path='/home' component={HomePage} />
 						<Route path='/shipping' component={ShippingPage} />
 						<Route path='/payment' component={PaymentPage} />
 						<Route path='/placeorder' component={PlaceOrderPage} />

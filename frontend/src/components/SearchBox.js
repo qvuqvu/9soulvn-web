@@ -15,9 +15,9 @@ const SearchBox = ({ history }) => {
 	};
 
 	return (
-		<Form onSubmit={handleSearch} className='d-flex'>
+		<Form onSubmit={handleSearch} className='d-flex ml-5'>
 			{/* display searchbar inside navbar in large screens only */}
-			<InputGroup className='mt-2'>
+			<InputGroup className='mt-2 ms-5'>
 				<Form.Control
 					type='text'
 					style={{

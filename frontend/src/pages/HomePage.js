@@ -126,7 +126,7 @@ const HomePage = ({ match, history }) => {
                       <i className="far fa-frown" /> No items found for this
                       search query
                     </div>
-                    Go Back to the <Link to="/">Home Page</Link>
+                    Go Back to the <Link to="/Home">Home Page</Link>
                   </Col>
                 )}
           </Row>

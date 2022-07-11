@@ -72,7 +72,7 @@ const Header = () => {
       {/* conditionally render different navbars for the mobile sreens */}
       <Navbar bg="primary" variant="dark" expand="lg">
         <Container>
-          <LinkContainer to="/">
+          <LinkContainer to="/home">
             <Navbar.Brand>
               <img
                 src="https://i.imgur.com/5TnrJeD.png"
@@ -84,6 +84,38 @@ const Header = () => {
 
           {/* history is available only inside Route, so this is used */}
           {/* display searchbar inside navbar in large screens only */}
+        
+          <Nav>
+            <LinkContainer to="/home" variant="primary">
+              <Nav.Link>
+                Trang chủ
+              </Nav.Link>
+            </LinkContainer>
+
+			<LinkContainer to="/storytelling" variant="primary">
+              <Nav.Link>
+                Storytelling	
+              </Nav.Link>
+            </LinkContainer>
+
+			<LinkContainer to="/gifting" variant="primary">
+              <Nav.Link>
+                Gifting
+              </Nav.Link>
+            </LinkContainer>
+
+			<LinkContainer to="/coaching" variant="primary">
+              <Nav.Link>
+                Coaching
+              </Nav.Link>
+            </LinkContainer>
+			<LinkContainer to="/blog" variant="primary">
+              <Nav.Link>
+                Blog
+              </Nav.Link>
+            </LinkContainer>
+          </Nav>
+
           <Route
             render={({ history }) => (
               <div className="d-none d-md-block">
@@ -91,36 +123,6 @@ const Header = () => {
               </div>
             )}
           />
-          <Nav>
-            <LinkContainer to="/" variant="secondary">
-              <Nav.Link>
-                Trang chủ
-              </Nav.Link>
-            </LinkContainer>
-
-			<LinkContainer to="/login" variant="primary">
-              <Nav.Link>
-                Storytelling	
-              </Nav.Link>
-            </LinkContainer>
-
-			<LinkContainer to="/login" variant="primary">
-              <Nav.Link>
-                Gifting
-              </Nav.Link>
-            </LinkContainer>
-
-			<LinkContainer to="/login" variant="primary">
-              <Nav.Link>
-                Coaching
-              </Nav.Link>
-            </LinkContainer>
-			<LinkContainer to="/login" variant="primary">
-              <Nav.Link>
-                Blog
-              </Nav.Link>
-            </LinkContainer>
-          </Nav>
           <Nav
             className="ms-auto nav-mobile"
             style={
