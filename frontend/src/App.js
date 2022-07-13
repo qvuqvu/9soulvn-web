@@ -22,10 +22,13 @@ import ProductListPage from './pages/ProductListPage';
 import ProductEditPage from './pages/ProductEditPage';
 import OrderListPage from './pages/OrderListPage';
 import ErrorPage from './pages/ErrorPage';
+import StorytellingPage from './pages/StorytellingPage';
+import CoachingPage from './pages/CoachingPage';
 
 // for showing the 'new update available' banner and to register the service worker
 import ServiceWorkerWrapper from './ServiceWorkerWrapper';
 import Gifting from './pages/GiftingPage';
+import BlogPage from './pages/BlogPage';
 
 const App = () => {
 	return (
@@ -59,6 +62,8 @@ const App = () => {
 							component={PasswordResetPage}
 						/>
 						<Route path='/gifting' component={Gifting} />
+						<Route path='/storytelling' component={StorytellingPage} />
+						<Route path='/coaching' component={CoachingPage} />
 						<Route path='/profile' component={ProfilePage} />
 						<Route path='/product/:id' component={ProductPage} />
 						<Route path='/cart/:id?' component={CartPage} />
@@ -67,6 +72,7 @@ const App = () => {
 							component={ConfirmPage}
 							exact
 						/>
+						<Route path='/blog' component={BlogPage} />
 						<Route path='/home' component={HomePage} />
 						<Route path='/shipping' component={ShippingPage} />
 						<Route path='/payment' component={PaymentPage} />

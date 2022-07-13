@@ -13,7 +13,7 @@ import SearchBox from "../components/SearchBox";
 import ProductSkeleton from "../components/ProductSkeleton";
 import Introduce from "../components/introduce";
 import IntroduceHome from "../components/introduceHome";
-const HomePage = ({ match, history }) => {
+const StorytellingPage = ({ match, history }) => {
   const keyword = match.params.keyword; // to search for products
   const pageNumber = Number(match.params.pageNumber) || 1; // current page number in the paginated display
   const [promptVerfication, setPromptVerification] = useState(false); // prompt user to verify email if not yet confirmed
@@ -79,7 +79,36 @@ const HomePage = ({ match, history }) => {
     <>
       <Meta />
       <div class="w-full">
-        <IntroduceHome/>
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col align-self-center">
+              <div className="h1 ">9soul.vn / storytelling</div>
+              <div className="h2">Reset your soul</div>
+              <hr width="100%" align="center" />
+              <div className="mt-[3%] mb-[3%] text-[16px] text-White font-head">
+                Cảm ơn đã chọn 9soul như một trạm nạp cảm xúc của một đôi lần
+                muốn “Thảnh thơi tìm tới” – MC’s
+              </div>
+              <hr width="100%" align="center" />
+              <div className="mt-5">
+                Chúng mình tin rằng, rồi sau cùng của cuộc đời, chúng ta cũng
+                chỉ mong có thể gói gém mấy chục năm khôn lớn lại thành một câu
+                chuyện đáng để nghe. Và trong một khoảnh khắc định mệnh nào đó,
+                câu chuyện ấy chính là cảm hứng.
+              </div>
+            </div>
+
+            <div className="col">
+              <div class="row justify-content-center">
+                <img
+                  className="w-auto"
+                  src="https://i.imgur.com/2mW9umO.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       {/* display carousel only on larger screens */}
       {/* {!keyword ? (
@@ -88,9 +117,18 @@ const HomePage = ({ match, history }) => {
 				<Link
 					className='btn btn-outline btn-outline-primary my-2'
 					to='/'>
-					Go Back
-				</Link>
+					Go Back         
 			)} */}
+      <div className="w-full">
+        <div className="container">
+          <div className="d-flex flex-column  align-items-center justify-content-center">
+           
+            <div className="h4 ">BUỔI TRÌNH DIỄN SẮP DIỄN RA</div>
+            <hr width="10%" align="center" />
+          </div>
+        </div>
+      </div>
+
       {/* display this search bar on home page on mobile screens */}
       <div className="d-block d-md-none">
         <SearchBox history={history} />
@@ -159,4 +197,4 @@ const HomePage = ({ match, history }) => {
   );
 };
 
-export default HomePage;
+export default StorytellingPage;

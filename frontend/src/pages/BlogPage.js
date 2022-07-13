@@ -13,7 +13,8 @@ import SearchBox from "../components/SearchBox";
 import ProductSkeleton from "../components/ProductSkeleton";
 import Introduce from "../components/introduce";
 import IntroduceHome from "../components/introduceHome";
-const HomePage = ({ match, history }) => {
+
+const BlogPage = ({ match, history }) => {
   const keyword = match.params.keyword; // to search for products
   const pageNumber = Number(match.params.pageNumber) || 1; // current page number in the paginated display
   const [promptVerfication, setPromptVerification] = useState(false); // prompt user to verify email if not yet confirmed
@@ -159,4 +160,4 @@ const HomePage = ({ match, history }) => {
   );
 };
 
-export default HomePage;
+export default BlogPage;

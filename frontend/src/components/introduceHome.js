@@ -1,10 +1,10 @@
-const Introduce = () => {
+const IntroduceHome = () => {
   return (
     <div className="container">
       <div className="row align-items-center">
         <div className="col align-self-center">
-          <div className="h1 ">9soul.vn / gifting</div>
-          <div className="h2">A little thing</div>
+          <div className="h1 ">9soul.vn</div>
+          <div className="h2">Thảnh thơi tìm tới</div>
           <hr width="100%" align="center" />
           <div className="mt-[3%] mb-[3%] text-[16px] text-White font-head">
             Cảm ơn đã chọn 9soul như một trạm nạp cảm xúc của một đôi lần muốn
@@ -23,7 +23,7 @@ const Introduce = () => {
           <div class="row justify-content-center">
             <img
               className="w-auto"
-              src="https://i.imgur.com/slNMOxj.png"
+              src="https://i.imgur.com/SRnPCP7.png"
               alt=""
             />
           </div>
@@ -33,4 +33,4 @@ const Introduce = () => {
   );
 };
 
-export default Introduce;
+export default IntroduceHome;
