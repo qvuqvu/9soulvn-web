@@ -8,7 +8,7 @@ import Product from './models/productModel.js';
 import Order from './models/orderModel.js';
 import Token from './models/tokenModel.js';
 import connectDB from './config/db.js';
-
+import Show from './models/showModel.js'
 dotenv.config();
 connectDB();
 
@@ -19,6 +19,7 @@ const importData = async () => {
 		await Product.deleteMany();
 		await Order.deleteMany();
 		await Token.deleteMany();
+		await Show.deleteMany();
 
 		// create an array os users to seed into the DB
 		const newUsers = await User.insertMany(users);
@@ -32,6 +33,7 @@ const importData = async () => {
 			user: adminUser,
 		}));
 
+		
 		await Product.insertMany(sampleProducts);
 
 		console.log('Data inserted in to the DB'.green.inverse);

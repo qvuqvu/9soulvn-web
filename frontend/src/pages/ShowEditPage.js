@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Form, Button, Image, FloatingLabel, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { listProductDetails, updateProduct } from '../actions/productActions';
-import { PRODUCT_UPDATE_RESET } from '../constants/productConstants';
+import { listShowDetails, updateShow } from '../actions/showActions';
+import { SHOW_UPDATE_RESET } from '../constants/showConstants';
 import axios from 'axios';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
@@ -11,9 +11,9 @@ import { refreshLogin, getUserDetails } from '../actions/userActions';
 
 import FormContainer from '../components/FormContainer';
 
-const ProductEditPage = ({ match, history }) => {
-	// all variable for stroing product details
-	const productId = match.params.id;
+const ShowEditPage = ({ match, history }) => {
+	// all variable for stroing show details
+	const showId = match.params.id;
 	const [name, setName] = useState('');
 	const [brand, setBrand] = useState('');
 	const [category, setCategory] = useState('');
@@ -22,20 +22,20 @@ const ProductEditPage = ({ match, history }) => {
 	const [price, setPrice] = useState(0.0);
 	const [countInStock, setCountInStock] = useState(0);
 
-	// to upload product image
+	// to upload show image
 	const [uploading, setUploading] = useState(false);
 	const [errorImageUpload, setErrorImageUpload] = useState('');
 	const dispatch = useDispatch();
 
-	const productDetails = useSelector((state) => state.productDetails);
-	const { loading, product, error } = productDetails;
+	const showDetails = useSelector((state) => state.showDetails);
+	const { loading, show, error } = showDetails;
 
-	const productUpdate = useSelector((state) => state.productUpdate);
+	const showUpdate = useSelector((state) => state.showUpdate);
 	const {
 		loading: loadingUpdate,
 		success: successUpdate,
 		error: errorUpdate,
-	} = productUpdate;
+	} = showUpdate;
 
 	const userLogin = useSelector((state) => state.userLogin);
 	const { userInfo } = userLogin;
@@ -61,36 +61,36 @@ const ProductEditPage = ({ match, history }) => {
 	}, [userLoginError, dispatch, userInfo]);
 
 	useEffect(() => {
-		dispatch(listProductDetails(productId));
+		dispatch(listShowDetails(showId));
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	// update the product details in state
+	// update the show details in state
 	useEffect(() => {
 		if (successUpdate) {
-			dispatch({ type: PRODUCT_UPDATE_RESET });
-			history.push('/admin/productlist');
+			dispatch({ type: SHOW_UPDATE_RESET });
+			history.push('/admin/showlist');
 		} else {
-			if (!product || product._id !== productId) {
-				dispatch(listProductDetails(productId));
+			if (!show || show._id !== showId) {
+				dispatch(listShowDetails(showId));
 			} else {
-				setName(product.name);
-				setPrice(product.price);
-				setImage(product.image);
-				setBrand(product.brand);
-				setCategory(product.category);
-				setDescription(product.description);
-				setCountInStock(product.countInStock);
+				setName(show.name);
+				setPrice(show.price);
+				setImage(show.image);
+				setBrand(show.brand);
+				setCategory(show.category);
+				setDescription(show.description);
+				setCountInStock(show.countInStock);
 			}
 		}
-	}, [product, dispatch, productId, history, successUpdate]);
+	}, [show, dispatch, showId, history, successUpdate]);
 
-	// submit the product details
+	// submit the show details
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		dispatch(
-			updateProduct({
-				_id: productId,
+			updateShow({
+				_id: showId,
 				name,
 				brand,
 				price,
@@ -105,7 +105,7 @@ const ProductEditPage = ({ match, history }) => {
 	// for image input, use a ref
 	const inputFile = useRef(null);
 
-	// click the above ref, to handle the overlay div above the product image
+	// click the above ref, to handle the overlay div above the show image
 	const handleImageClick = () => {
 		inputFile.current.click();
 	};
@@ -134,13 +134,13 @@ const ProductEditPage = ({ match, history }) => {
 
 	return (
 		<>
-			<Link to='/admin/productlist'>
+			<Link to='/admin/showlist'>
 				<Button variant='outline-primary' className='mt-3'>
 					Go Back
 				</Button>
 			</Link>
 			<FormContainer style={{ marginTop: '-2em' }}>
-				<h1>Edit Product</h1>
+				<h1>Edit show</h1>
 				{loadingUpdate ? (
 					<Loader />
 				) : errorUpdate ? (
@@ -188,8 +188,8 @@ const ProductEditPage = ({ match, history }) => {
 											type='number'
 											value={price}
 											min='0'
-											max='999999999'
-											step='0'
+											max='1000000000'
+											step='0.1'
 											onChange={(e) =>
 												setPrice(e.target.value)
 											}
@@ -255,7 +255,7 @@ const ProductEditPage = ({ match, history }) => {
 														}}
 													/>
 													<div
-														className='image-overlay-product'
+														className='image-overlay-show'
 														onClick={
 															handleImageClick
 														}>
@@ -336,7 +336,7 @@ const ProductEditPage = ({ match, history }) => {
 									<Button
 										type='submit'
 										className='my-1 ms-auto'>
-										Update Product
+										Update Show
 									</Button>
 								</div>
 							</Form>
@@ -348,4 +348,4 @@ const ProductEditPage = ({ match, history }) => {
 	);
 };
 
-export default ProductEditPage;
+export default ShowEditPage;

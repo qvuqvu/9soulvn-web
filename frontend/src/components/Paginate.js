@@ -24,6 +24,7 @@ const Paginate = ({
 									: forUsers
 									? `/admin/userlist/${ele + 1}`
 									: `/admin/productlist/${ele + 1}`
+									
 								: keyword
 								? `/search/${keyword}/page/${ele + 1}`
 								: `/page/${ele + 1}`

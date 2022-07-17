@@ -1,6 +1,6 @@
 {
-	"name": "Kosells Ecommerce",
-	"short_name": "Kosells",
+	"name": "(",
+	"short_name": "9soul",
 	"icons": [
 		{
 			"src": "/favicon-16x16.png",
@@ -27,6 +27,6 @@
 	"orientation": "portrait",
 	"background_color": "#dee2e6",
 	"display": "standalone",
-	"description": "An E-commerce app to buy the best products at the lowest prices! Built by Rajat",
+	"description": "Không gian tâm hồn",
 	"start_url": "/"
 }

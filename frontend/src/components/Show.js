@@ -4,50 +4,50 @@ import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
 import '../styles/product.css';
 
-const Product = ({ product }) => {
+const Show = ({ show }) => {
 	return (
 		<Card className='mt-3 p-0'>
-			<Link to={`/product/${product._id}`}>
+			<Link to={`/show/${show._id}`}>
 				<Card.Img
 					loading='lazy'
-					className='product-image'
-					src={product.image}
+					className='product-image'	
+					src={show.image}
 					variant='top'
-					alt={product.name}
+					alt={show.name}
 				/>
 			</Link>
 
 			<Card.Body>
 				<Link
-					to={`/product/${product._id}`}
+					to={`/show/${show._id}`}
 					style={{  textDecoration: 'none' }}>
 					<Card.Title className='product-title' as='body'>
-						{product.name}
+						{show.name}
 					</Card.Title>
 				</Link>
 
-				<Card.Text as='div'>
-					{product && product.rating && (
+				{/* <Card.Text as='div'>
+					{show && show.rating && (
 						<Rating
-							value={product.rating}
-							text={`${product.numReviews} Review${
-								product.numReviews > 1 ? 's' : ''
+							value={show.rating}
+							text={`${show.numReviews} Review${
+								show.numReviews > 1 ? 's' : ''
 							}`}
 						/>
 					)}
-				</Card.Text>
+				</Card.Text> */}
 
-				<Card.Text as='h4'>
-					{product.price &&
-						product.price.toLocaleString('en-IN', {
+				{/* <Card.Text as='h4'>
+					{show.price &&
+						show.price.toLocaleString('en-vn', {
 							maximumFractionDigits: 2,
 							style: 'currency',
 							currency: 'vnd',
 						})}
-				</Card.Text>
+				</Card.Text> */}
 			</Card.Body>
 		</Card>
 	);
 };
 
-export default Product;
+export default Show;

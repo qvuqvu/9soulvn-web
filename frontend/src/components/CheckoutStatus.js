@@ -76,10 +76,10 @@ const CheckoutStatus = ({ step1, step2, step3, step4 }) => {
 				/>
 				{step4 ? (
 					<LinkContainer to='/placeorder'>
-						<Nav.Link>Place Order</Nav.Link>
+						<Nav.Link>Đặt hàng</Nav.Link>
 					</LinkContainer>
 				) : (
-					<Nav.Link disabled>Place Order</Nav.Link>
+					<Nav.Link disabled>Đặt hàng</Nav.Link>
 				)}
 			</div>
 		</Nav>

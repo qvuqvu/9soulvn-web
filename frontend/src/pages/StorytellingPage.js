@@ -6,24 +6,25 @@ import Paginate from "../components/Paginate";
 import { Row, Col } from "react-bootstrap";
 import ProductCarousel from "../components/ProductCarousel";
 import Meta from "../components/Meta";
-import { listProducts } from "../actions/productActions";
+import { listShows } from "../actions/showActions";
 import { refreshLogin, getUserDetails } from "../actions/userActions";
 import Message from "../components/Message";
 import SearchBox from "../components/SearchBox";
 import ProductSkeleton from "../components/ProductSkeleton";
 import Introduce from "../components/introduce";
 import IntroduceHome from "../components/introduceHome";
+import Show from "../components/Show";
 const StorytellingPage = ({ match, history }) => {
-  const keyword = match.params.keyword; // to search for products
+  const keyword = match.params.keyword; // to search for shows
   const pageNumber = Number(match.params.pageNumber) || 1; // current page number in the paginated display
   const [promptVerfication, setPromptVerification] = useState(false); // prompt user to verify email if not yet confirmed
-  const [products, setProducts] = useState(null);
-  const [productAvailable, setProductAvailable] = useState(false);
+  const [shows, setShows] = useState(null);
+  const [showAvailable, setShowAvailable] = useState(false);
   const dispatch = useDispatch();
 
-  // get the products list, userinfo and user details form the redix store
-  const productList = useSelector((state) => state.productList);
-  let { loading, error, pages } = productList;
+  // get the shows list, userinfo and user details form the redix store
+  const showList = useSelector((state) => state.showList);
+  let { loading, error, pages } = showList;
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
@@ -48,23 +49,23 @@ const StorytellingPage = ({ match, history }) => {
     }
   }, [userInfoError, dispatch, userInfo]);
 
-  // set a state variable to true or false depending on if products is avialable in the state
+  // set a state variable to true or false depending on if shows is avialable in the state
   useEffect(() => {
-    if (products) {
-      products.length ? setProductAvailable(true) : setProductAvailable(false);
+    if (shows) {
+      shows.length ? setShowAvailable(true) : setShowAvailable(false);
     }
-  }, [products]);
+  }, [shows]);
 
-  // fetch products from redux store into local state
+  // fetch shows from redux store into local state
   useEffect(() => {
-    if (productList) {
-      if (productList.products) setProducts([...productList.products]);
+    if (showList) {
+      if (showList.shows) setShows([...showList.shows]);
     }
-  }, [productList]);
+  }, [showList]);
 
-  // list products based on keyword and pagenumber
+  // list shows based on keyword and pagenumber
   useEffect(() => {
-    dispatch(listProducts(keyword, pageNumber));
+    dispatch(listShows(keyword, pageNumber));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, keyword, pageNumber]);
 
@@ -146,19 +147,19 @@ const StorytellingPage = ({ match, history }) => {
         <Message dismissible variant="danger" duration={10}>
           {error}
         </Message>
-      ) : !loading && products ? (
+      ) : !loading && shows ? (
         <>
           <Row>
-            {products.length
-              ? products.map((product) => {
+            {shows.length
+              ? shows.map((show) => {
                   return (
-                    <Col sm={12} md={6} lg={4} xl={3} key={product._id}>
-                      <Product product={product} />
+                    <Col sm={12} md={6} lg={4} xl={3} key={show._id}>
+                      <Show show={show}/>
                     </Col>
                   );
                 })
               : keyword &&
-                !productAvailable && (
+                !showAvailable && (
                   //   show this only if user has searched for some item and it is not available
                   <Col className="text-center">
                     <div>
@@ -178,14 +179,14 @@ const StorytellingPage = ({ match, history }) => {
         </>
       ) : (
         loading &&
-        products &&
-        products.length === 0 && (
+        shows &&
+        shows.length === 0 && (
           <Row>
             {[1, 2, 3, 4].map((ele) => {
               return (
                 <Col sm={12} md={6} lg={4} xl={3} key={ele}>
                   <div>
-                    <ProductSkeleton />
+                    <ProductSkeleton/>
                   </div>
                 </Col>
               );

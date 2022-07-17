@@ -39,7 +39,7 @@ const Product = ({ product }) => {
 
 				<Card.Text as='h4'>
 					{product.price &&
-						product.price.toLocaleString('en-IN', {
+						product.price.toLocaleString('en-vn', {
 							maximumFractionDigits: 2,
 							style: 'currency',
 							currency: 'vnd',

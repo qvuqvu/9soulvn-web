@@ -12,6 +12,16 @@ import {
 	productTopRatedReducer,
 } from './reducers/productReducers';
 
+import {
+	showListReducer,
+	showDetailsReducer,
+	showDeleteReducer,
+	showCreateReducer,
+	showCreateReviewReducer,
+	showUpdateReducer,
+	showTopRatedReducer,
+} from './reducers/showReducers';
+
 import { cartReducer } from './reducers/cartReducers';
 
 import {
@@ -39,6 +49,13 @@ import {
 
 // combine all the above reducers to the store
 const reducer = combineReducers({
+	showList: showListReducer,
+	showDetails: showDetailsReducer,
+	showDelete: showDeleteReducer,
+	showCreate: showCreateReducer,
+	showCreateReview: showCreateReviewReducer,
+	showUpdate: showUpdateReducer,
+	showTopRated: showTopRatedReducer,
 	productList: productListReducer,
 	productDetails: productDetailsReducer,
 	productDelete: productDeleteReducer,

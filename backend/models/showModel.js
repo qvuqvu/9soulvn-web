@@ -71,6 +71,6 @@ const showSchema = mongoose.Schema(
 	}
 );
 
-const Show = mongoose.model('Show',showSchema );
+const Show = mongoose.model('Shows',showSchema );
 
 export default Show;

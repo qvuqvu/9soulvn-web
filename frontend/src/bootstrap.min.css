@@ -203,6 +203,15 @@ h3 {
     }
 }
 
+.h4,
+h4 {
+    font-family: var(--bs-body-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    color: var(--bs-body-color);
+}
 
 @media (min-width:1200px) {
 
@@ -211,7 +220,7 @@ h3 {
         font-family: var(--bs-body-font-family);
         font-style: normal;
         font-weight: 500;
-        font-size: 15px;
+        font-size: 20px;
         line-height: 30px;
         color: var(--bs-body-color);
     }
@@ -2275,15 +2284,15 @@ progress {
 .table {
     --bs-table-bg: transparent;
     --bs-table-accent-bg: transparent;
-    --bs-table-striped-color: #212529;
+    --bs-table-striped-color: #fff;
     --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
-    --bs-table-active-color: #212529;
+    --bs-table-active-color:#fff;
     --bs-table-active-bg: rgba(0, 0, 0, 0.1);
-    --bs-table-hover-color: #212529;
+    --bs-table-hover-color:#fff;
     --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
     width: 100%;
     margin-bottom: 1rem;
-    color: #212529;
+    color: #dee2e6;
     vertical-align: top;
     border-color: #dee2e6
 }
@@ -2422,7 +2431,7 @@ progress {
     --bs-table-active-color: #000;
     --bs-table-hover-bg: #dadedf;
     --bs-table-hover-color: #000;
-    color: #000;
+    color: #fff;
     border-color: #d4d8d9
 }
 

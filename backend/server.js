@@ -20,6 +20,7 @@ import orderRoutes from './routes/orderRoutes.js';
 import configRoutes from './routes/configRoutes.js';
 import uploadRoutes from './routes/uploadRoutes.js';
 import setupPassport from './config/passportSetup.js';
+import showRoutes from './routes/showRoutes.js';
 
 dotenv.config();
 const app = express();
@@ -52,11 +53,13 @@ setupPassport();
 
 // configure all the routes
 app.use('/api/products', productRoutes);
+app.use('/api/shows',showRoutes)
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/config', configRoutes);
 app.use('/api/upload', uploadRoutes);
+
 
 const __dirname = path.resolve();
 

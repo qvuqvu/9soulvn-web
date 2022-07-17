@@ -19,7 +19,7 @@ import { protectRoute, isAdmin } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
-// @desc register a new user & get all users if admin
+// @desc register a new user & get all users if 		
 // @route POST /api/users/
 // @access PUBLIC || PRIVATE?ADMIN
 router.route('/').post(registerUser).get(protectRoute, isAdmin, getAllUsers);

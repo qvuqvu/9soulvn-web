@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
 import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
 import CartPage from './pages/CartPage';
@@ -24,12 +23,13 @@ import OrderListPage from './pages/OrderListPage';
 import ErrorPage from './pages/ErrorPage';
 import StorytellingPage from './pages/StorytellingPage';
 import CoachingPage from './pages/CoachingPage';
-
+import ShowEditPage from './pages/ShowEditPage';
+import ShowPage from './pages/ShowPage';
 // for showing the 'new update available' banner and to register the service worker
 import ServiceWorkerWrapper from './ServiceWorkerWrapper';
 import Gifting from './pages/GiftingPage';
 import BlogPage from './pages/BlogPage';
-
+import ShowListPage from './pages/ShowListPage';
 const App = () => {
 	return (
 		<Router>
@@ -66,7 +66,8 @@ const App = () => {
 						<Route path='/coaching' component={CoachingPage} />
 						<Route path='/profile' component={ProfilePage} />
 						<Route path='/product/:id' component={ProductPage} />
-						<Route path='/cart/:id?' component={CartPage} />
+						<Route path='/show/:id' component={ShowPage} />
+						<Route path='/cart/:id?' component={CartPage} />	
 						<Route
 							path='/user/confirm/:token'
 							component={ConfirmPage}
@@ -93,6 +94,20 @@ const App = () => {
 							component={UserEditPage}
 						/>
 						<Route
+							path='/admin/showlist'
+							exact
+							component={ShowListPage}
+						/>
+						<Route
+							path='/admin/showlist/:pageNumber'
+							component={ShowListPage}
+							exact
+						/>
+						<Route
+							path='/admin/show/:id/edit'
+							component={ShowEditPage}
+						/>
+						<Route
 							path='/admin/productlist'
 							exact
 							component={ProductListPage}
@@ -111,7 +126,7 @@ const App = () => {
 							component={OrderListPage}
 							exact
 						/>
-						<Route
+						<Route				
 							path='/admin/orderlist/:pageNumber'
 							component={OrderListPage}
 							exact
