@@ -39,7 +39,7 @@ const App = () => {
 			<main className='py-2'>
 				<Container>
 					<Switch>
-						<Route path='/home' component={HomePage} exact />
+						<Route path='/' component={HomePage} exact />
 						<Route
 							path='/search/:keyword'
 							component={HomePage}

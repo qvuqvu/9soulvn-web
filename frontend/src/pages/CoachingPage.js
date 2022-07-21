@@ -83,7 +83,7 @@ const CoachingPage = ({ match, history }) => {
       <div className="row align-items-center">
         <div className="col align-self-center">
           <div className="h1 ">9soul.vn / coaching</div>
-          <div className="h2">growing up together</div>
+          <div className="h2 mt-4">growing up together</div>
           <hr width="100%" align="center" />
           <div className="mt-[3%] mb-[3%] text-[16px] text-White font-head">
             Cảm ơn đã chọn 9soul như một trạm nạp cảm xúc của một đôi lần muốn

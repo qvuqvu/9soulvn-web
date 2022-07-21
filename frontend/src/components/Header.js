@@ -115,14 +115,14 @@ const Header = () => {
               </Nav.Link>
             </LinkContainer>
           </Nav>
-
+{/* 
           <Route
             render={({ history }) => (
               <div className="d-none d-md-block">
                 <SearchBox history={history} />
               </div>
             )}
-          />
+          /> */}
           <Nav
             className="ms-auto nav-mobile"
             style={
