@@ -230,8 +230,8 @@ h4 {
 h5 {
     font-family: var(--bs-body-font-family);
     font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 20px;
     line-height: 150%;
 }
 
@@ -239,8 +239,8 @@ h5 {
 h6 {
      font-family: var(--bs-body-font-family);
     font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 15px;
     line-height: 150%;
 }
 
@@ -330,11 +330,12 @@ sup {
 
 a {
     color: #EAEAEA;
-    
+    text-decoration:none;  
 }
 
 a:hover {
     color: #E52521
+    
 }
 
 a:not([href]):not([class]),
@@ -8247,12 +8248,14 @@ fieldset:disabled .btn {
 
 .d-flex {
     display: -ms-flexbox !important;
-    display: flex !important
+    display: flex !important;
+    gap: 8%;
 }
 
 .d-inline-flex {
     display: -ms-inline-flexbox !important;
-    display: inline-flex !important
+    display: inline-flex !important;
+    
 }
 
 .d-none {
@@ -13158,3 +13161,22 @@ fieldset:disabled .btn {
 .toast .btn-close {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>")
 }
+
+
+.container1 {
+    position: relative;
+    text-align: center;
+    
+  }
+  
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .blackwhite {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+  }

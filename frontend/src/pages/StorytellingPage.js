@@ -184,8 +184,6 @@ const StorytellingPage = ({ match, history }) => {
 
       <hr width="100%" align="center" />
 
-        
-
       {/* display this search bar on home page on mobile screens */}
       <div className="d-block d-md-none">
         <SearchBox history={history} />
@@ -250,7 +248,37 @@ const StorytellingPage = ({ match, history }) => {
           </Row>
         )
       )}
-    </>
+      <hr width="100%" align="center" />
+              <div className="mt-5 mb-[3%] h2 text-White font-head text-center text">
+                Podcast
+              </div>
+              <div className="mt-3 h6 text-center">
+              9 giờ tối, một vài đêm trong tuần, bạn cho mình cái quyền được cô đơn để gặm nhắm <br></br> vài thứ gia vị mới.
+              </div>
+              <div className="mt-5 mb-5 d-flex flex-row pt-[5%] h5 justify-content-center">
+                <div><a href="#">Spotify</a></div>
+                <div>|</div>
+                <div><a href="#">Soundcloud</a></div>
+                <div>|</div>
+                <div><a href="#">Apple Podcast</a></div>
+                <div>|</div>
+                <div><a href="#">Google Podcasts</a></div>
+              </div>
+
+              <div class="container1">
+              <img
+                  className="blackwhite"
+                  src="https://i.imgur.com/HetbhbI.png"
+                  alt=""
+                />
+  <div class="centered ">
+    <p  class="h1">Storytelling</p>
+    <p class="h2">thảnh thơi cho đời bớt vội</p>
+  </div>
+</div>
+
+    </> 
+    
   );
 };
 
