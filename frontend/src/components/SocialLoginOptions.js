@@ -18,7 +18,7 @@ const SocialLoginOptions = () => {
 			}}>
 			<div className='social-login-container'>
 				<div className='social-login-line' />
-				<p className='social-login-content'>Hoặc đăng nhập nhanh với</p>
+				<p className='social-login-content'>Hoặc đăng nhập với</p>
 				<div className='social-login-line' />
 			</div>
 			<Card.Body
