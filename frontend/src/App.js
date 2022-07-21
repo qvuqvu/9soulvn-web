@@ -30,13 +30,16 @@ import ServiceWorkerWrapper from './ServiceWorkerWrapper';
 import Gifting from './pages/GiftingPage';
 import BlogPage from './pages/BlogPage';
 import ShowListPage from './pages/ShowListPage';
+import aboveFooterStorytelling from './components/aboveFooterStorytelling';
+import aboveFooterGifting from './components/aboveFooterGifting';
+import aboveFooterCoaching from './components/aboveFooterCoaching';
 const App = () => {
 	return (
 		<Router>
 			<Header />
 			<ServiceWorkerWrapper />
 
-			<main className='py-2'>
+			<main className=''>
 				<Container>
 					<Switch>
 						<Route path='/' component={HomePage} exact />
@@ -134,6 +137,9 @@ const App = () => {
 						<Route component={ErrorPage} />
 					</Switch>
 				</Container>
+				<Route path='/storytelling' component={aboveFooterStorytelling} />
+				<Route path='/gifting' component={aboveFooterGifting} />
+				<Route path='/coaching' component={aboveFooterCoaching} />
 			</main>
 			<Footer />
 		</Router>
