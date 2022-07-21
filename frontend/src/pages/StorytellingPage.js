@@ -14,6 +14,7 @@ import ProductSkeleton from "../components/ProductSkeleton";
 import Introduce from "../components/introduce";
 import IntroduceHome from "../components/introduceHome";
 import Show from "../components/Show";
+import ShowUpComing from "../components/ShowUpComing";
 const StorytellingPage = ({ match, history }) => {
   const keyword = match.params.keyword; // to search for shows
   const pageNumber = Number(match.params.pageNumber) || 1; // current page number in the paginated display
@@ -123,12 +124,65 @@ const StorytellingPage = ({ match, history }) => {
       <div className="w-full">
         <div className="container">
           <div className="d-flex flex-column  align-items-center justify-content-center">
-           
             <div className="h4 ">BUỔI TRÌNH DIỄN SẮP DIỄN RA</div>
             <hr width="10%" align="center" />
           </div>
         </div>
       </div>
+
+      {error ? (
+        <Message dismissible variant="danger" duration={10}>
+          {error}
+        </Message>
+      ) : !loading && shows ? (
+        <>
+          <Row>
+            {shows.length
+              ? shows.map((show) => {
+                  return (
+                    <Col sm={12} md={6} lg={4} xl={3} key={show._id}>
+                      <ShowUpComing show={show} />
+                    </Col>
+                  );
+                })
+              : keyword &&
+                !showAvailable && (
+                  //   show this only if user has searched for some item and it is not available
+                  <Col className="text-center">
+                    <div>
+                      <i className="far fa-frown" /> No items found for this
+                      search query
+                    </div>
+                    Go Back to the <Link to="/Home">Home Page</Link>
+                  </Col>
+                )}
+          </Row>
+          <Paginate
+            className="mt-auto text-center"
+            page={pageNumber}
+            keyword={keyword ? keyword : ""}
+            pages={pages}
+          />
+        </>
+      ) : (
+        loading &&
+        shows &&
+        shows.length === 0 && (
+          <Row>
+            {[1, 2, 3, 4].map((ele) => {
+              return (
+                <Col sm={12} md={6} lg={5} xl={3} key={ele}>
+                  <div>
+                    <ProductSkeleton />
+                  </div>
+                </Col>
+              );
+            })}
+          </Row>
+        )
+      )}
+
+      <hr width="100%" align="center" />
 
       {/* display this search bar on home page on mobile screens */}
       <div className="d-block d-md-none">
@@ -154,7 +208,7 @@ const StorytellingPage = ({ match, history }) => {
               ? shows.map((show) => {
                   return (
                     <Col sm={12} md={6} lg={4} xl={3} key={show._id}>
-                      <Show show={show}/>
+                      <Show show={show} />
                     </Col>
                   );
                 })
@@ -186,7 +240,7 @@ const StorytellingPage = ({ match, history }) => {
               return (
                 <Col sm={12} md={6} lg={4} xl={3} key={ele}>
                   <div>
-                    <ProductSkeleton/>
+                    <ProductSkeleton />
                   </div>
                 </Col>
               );
@@ -194,7 +248,37 @@ const StorytellingPage = ({ match, history }) => {
           </Row>
         )
       )}
-    </>
+      <hr width="100%" align="center" />
+              <div className="mt-5 mb-[3%] h2 text-White font-head text-center text">
+                Podcast
+              </div>
+              <div className="mt-3 h6 text-center">
+              9 giờ tối, một vài đêm trong tuần, bạn cho mình cái quyền được cô đơn để gặm nhắm <br></br> vài thứ gia vị mới.
+              </div>
+              <div className="mt-5 mb-5 d-flex flex-row pt-[5%] h5 justify-content-center">
+                <div><a href="#">Spotify</a></div>
+                <div>|</div>
+                <div><a href="#">Soundcloud</a></div>
+                <div>|</div>
+                <div><a href="#">Apple Podcast</a></div>
+                <div>|</div>
+                <div><a href="#">Google Podcasts</a></div>
+              </div>
+
+              <div class="container1">
+              <img
+                  className="blackwhite"
+                  src="https://i.imgur.com/HetbhbI.png"
+                  alt=""
+                />
+  <div class="centered ">
+    <p  class="h1">Storytelling</p>
+    <p class="h2">thảnh thơi cho đời bớt vội</p>
+  </div>
+</div>
+
+    </> 
+    
   );
 };
 

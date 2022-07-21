@@ -74,7 +74,7 @@ const App = () => {
 							exact
 						/>
 						<Route path='/blog' component={BlogPage} />
-						<Route path='/home' component={HomePage} />
+						<Route path='/' component={HomePage} />
 						<Route path='/shipping' component={ShippingPage} />
 						<Route path='/payment' component={PaymentPage} />
 						<Route path='/placeorder' component={PlaceOrderPage} />
