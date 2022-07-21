@@ -11,7 +11,7 @@
     margin: 1.5em 0;
     padding: 1em;
     padding-top: 0;
-    box-shadow: 0 6px 16px 0 rgb(0 0 0 / 20%);
+    /* box-shadow: 0 6px 16px 0 rgb(0 0 0 / 20%); */
 }
 
 .form-heading h1 {
@@ -21,7 +21,7 @@
     font-size: 1.4em;
     font-weight: 600;
     cursor: pointer;
-    border: 2px solid ghostwhite;
+    /* border: 2px solid ghostwhite; */
     border-top: 0;
     transition: all 0.2s ease-in-out;
 
