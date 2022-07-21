@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { LinkContainer } from "react-router-bootstrap";
+import { LinkContainer, Image } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { logoutUser } from "../actions/userActions";
 import { Route } from "react-router-dom";
 import SearchBox from "./SearchBox";
+import cart2 from "../assets/cart.svg";
 import "../styles/header.css";
+import profile from "../assets/profile.svg";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -84,38 +86,28 @@ const Header = () => {
 
           {/* history is available only inside Route, so this is used */}
           {/* display searchbar inside navbar in large screens only */}
-        
+
           <Nav>
             <LinkContainer to="/home" variant="primary">
-              <Nav.Link>
-                Trang chủ
-              </Nav.Link>
+              <Nav.Link>Trang chủ</Nav.Link>
             </LinkContainer>
 
-			<LinkContainer to="/storytelling" variant="primary">
-              <Nav.Link>
-                Storytelling	
-              </Nav.Link>
+            <LinkContainer to="/storytelling" variant="primary">
+              <Nav.Link>Storytelling</Nav.Link>
             </LinkContainer>
 
-			<LinkContainer to="/gifting" variant="primary">
-              <Nav.Link>
-                Gifting
-              </Nav.Link>
+            <LinkContainer to="/gifting" variant="primary">
+              <Nav.Link>Gifting</Nav.Link>
             </LinkContainer>
 
-			<LinkContainer to="/coaching" variant="primary">
-              <Nav.Link>
-                Coaching
-              </Nav.Link>
+            <LinkContainer to="/coaching" variant="primary">
+              <Nav.Link>Coaching</Nav.Link>
             </LinkContainer>
-			<LinkContainer to="/blog" variant="primary">
-              <Nav.Link>
-                Blog
-              </Nav.Link>
+            <LinkContainer to="/blog" variant="primary">
+              <Nav.Link>Blog</Nav.Link>
             </LinkContainer>
           </Nav>
-{/* 
+          {/* 
           <Route
             render={({ history }) => (
               <div className="d-none d-md-block">
@@ -182,9 +174,13 @@ const Header = () => {
                 ) : (
                   ""
                 )}
-                <i className="fas fa-shopping-cart navbar-icons" />{" "}
+                 <img
+                    src={cart2}
+                    className="navbar-icons"
+                    alt="cart2"
+                  /> 
                 {!(userInfo && userInfo.isAdmin) || window.innerWidth >= 430
-                  ? "Cart"
+                  ? ""
                   : ""}
               </Nav.Link>
             </LinkContainer>
@@ -257,7 +253,12 @@ const Header = () => {
             ) : (
               <LinkContainer to="/login" variant="primary">
                 <Nav.Link>
-                  <i className="fas fa-user navbar-icons" /> Sign In
+                  {/* <i className="fas fa-user navbar-icons" /> Sign In */}
+                  <img
+                    src={profile}
+                    className="navbar-icons"
+                    alt="profile"
+                  /> 
                 </Nav.Link>
               </LinkContainer>
             )}

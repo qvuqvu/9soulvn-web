@@ -19,7 +19,7 @@ button.navbar-toggle-btn:focus {
     position: absolute;
     height: 1em;
     width: 1em;
-    top: 25%;
+    top: 53%;
     color: white;
     display: flex;
     align-items: center;
@@ -29,7 +29,7 @@ button.navbar-toggle-btn:focus {
     border-radius: 50%;
     background: #FF0800;
     margin: 0;
-    margin-left: 0.8em;
+    margin-left: 1.2em;
     font-weight: bold;
 }
 

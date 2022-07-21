@@ -124,7 +124,7 @@ const StorytellingPage = ({ match, history }) => {
       <div className="w-full">
         <div className="container">
           <div className="d-flex flex-column  align-items-center justify-content-center">
-            <div className="h4 ">BUỔI TRÌNH DIỄN SẮP DIỄN RA</div>
+            <div className="fs-5 ">BUỔI TRÌNH DIỄN SẮP DIỄN RA</div>
             <hr width="10%" align="center" />
           </div>
         </div>
