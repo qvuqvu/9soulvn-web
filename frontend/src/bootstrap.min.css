@@ -205,7 +205,7 @@
  
  .h4,
  h4 {
-     font-family: var(--bs-body-font-family);
+     font-family: var(--bs-title-font-family);
      font-style: normal;
      font-weight: 400;
      font-size: 20px;
@@ -217,7 +217,7 @@
  
      .h4,
      h4 {
-         font-family: var(--bs-body-font-family);
+         font-family: var(--bs-title-font-family);
          font-style: normal;
          font-weight: 500;
          font-size: 20px;
