@@ -2525,10 +2525,10 @@ progress {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
+    color: #bcbcbc;
+    background-color: #2C2C2C;
+    
+  
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -2551,11 +2551,11 @@ progress {
 }
 
 .form-control:focus {
-    color: #212529;
-    background-color: #fff;
-    border-color: #969fa8;
+    color: #ffffff;
+    background-color: #2C2C2C;
+
     outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(44, 62, 80, .25)
+  
 }
 
 .form-control::-webkit-date-and-time-value {
@@ -2563,33 +2563,33 @@ progress {
 }
 
 .form-control::-webkit-input-placeholder {
-    color: #95a5a6;
+    color: #212529;
     opacity: 1
 }
 
 .form-control::-moz-placeholder {
-    color: #95a5a6;
+    color: #212529;
     opacity: 1
 }
 
 .form-control:-ms-input-placeholder {
-    color: #95a5a6;
+    color: #212529;
     opacity: 1
 }
 
 .form-control::-ms-input-placeholder {
-    color: #95a5a6;
+    color: #212529;
     opacity: 1
 }
 
 .form-control::placeholder {
-    color: #95a5a6;
+    color: #212529;
     opacity: 1
 }
 
 .form-control:disabled,
 .form-control[readonly] {
-    background-color: #ecf0f1;
+    background-color: #2C2C2C;
     opacity: 1
 }
 
@@ -2599,8 +2599,8 @@ progress {
     -webkit-margin-end: .75rem;
     -moz-margin-end: .75rem;
     margin-inline-end: .75rem;
-    color: #212529;
-    background-color: #ecf0f1;
+    color: #ffffff;
+    background-color: #2C2C2C;
     pointer-events: none;
     border-color: inherit;
     border-style: solid;
@@ -3184,11 +3184,10 @@ textarea.form-control-lg {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    color: #fff;
     text-align: center;
     white-space: nowrap;
     background-color: #ecf0f1;
-    border: 1px solid #ced4da;
     border-radius: .25rem
 }
 
