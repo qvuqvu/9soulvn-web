@@ -322,18 +322,13 @@ const LoginPage = ({ location, history }) => {
       <>
         <FormContainer>
           <div className="form-inner-container">
-            <div className="form-heading">
-              <h1
-                style={{
-                  background: "ghostwhite",
-                  boxShadow: "0px -1px 5px 0px rgba(0, 0, 0, 0.2)",
-                  WebkitBoxShadow: "0px -1px 5px 0px rgba(0, 0, 0, 0.2)",
-                  MozBoxShadow: "0px -1px 5px 0px rgba(0, 0, 0, 0.2)",
-                  cursor: "default",
-                }}
-              >
-                Đổi mật khẩu
-              </h1>
+          <div class="row justify-content-between">
+              <div class="col-4">
+                <h1>Đổi mật khẩu</h1>
+              </div>
+              <div class="col-4 align-self-center">
+              
+              </div>
             </div>
 
             {showLoading ? (
