@@ -244,6 +244,14 @@ h6 {
     line-height: 150%;
 }
 
+.h7,
+h7 {
+     font-family: var(--bs-body-font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+}
 p {
     margin-top: 0;
     margin-bottom: 1rem
@@ -3497,15 +3505,31 @@ fieldset:disabled .btn {
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #2C2C2C;
+    color: #2C2C2C;
+    background-color: #fff ;
     border-color: #2C2C2C
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #253544;
+    background-color: #E52521;
     border-color: #233240
+}
+
+.product-icons {
+    fill: rgb(141, 73, 73);
+
+    
+}
+
+.svg {
+    fill: #000;
+}
+
+.btn-primary:hover .svg{
+    fill: #fff;
+    transition: 0.1s ease-in-out
+   
 }
 
 .btn-check:focus+.btn-primary,
@@ -6324,10 +6348,9 @@ fieldset:disabled .btn {
     position: relative;
     display: block;
     padding: .5rem 1rem;
-    color: #212529;
+    color:#EAEAEA;
     text-decoration: none;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, .125)
+    border: 1px solid rgba(88,88,88)
 }
 
 .list-group-item:first-child {
