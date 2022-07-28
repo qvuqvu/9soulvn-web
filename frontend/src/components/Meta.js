@@ -12,7 +12,7 @@ const Meta = ({ title, description, keywords }) => {
 };
 
 Meta.defaultProps = {
-	title: 'Welcome to Kosells',
+	title: '9soul.vn | Space For The Soul',
 	keywords: 'Electronics, Kosells, Ecommerce, Rajat',
 	description: 'Buy the best products at the lowest prices',
 };
