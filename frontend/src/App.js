@@ -23,8 +23,12 @@ import OrderListPage from "./pages/OrderListPage";
 import ErrorPage from "./pages/ErrorPage";
 import StorytellingPage from "./pages/StorytellingPage";
 import CoachingPage from "./pages/CoachingPage";
+import CoachEditPage from "./pages/CoachEditPage";
+import CoachListPage from "./pages/CoachListPage";
+import CoachPage from "./pages/CoachPage";
 import ShowEditPage from "./pages/ShowEditPage";
 import ShowPage from "./pages/ShowPage";
+import SingleBlog from "./components/SingleBlog";
 // for showing the 'new update available' banner and to register the service worker
 import ServiceWorkerWrapper from "./ServiceWorkerWrapper";
 import Gifting from "./pages/GiftingPage";
@@ -33,6 +37,8 @@ import ShowListPage from "./pages/ShowListPage";
 import aboveFooterCoaching from "./components/aboveFooterCoaching";
 import aboveFooterGifting from "./components/aboveFooterGifting";
 import aboveFooterStorytelling from "./components/aboveFooterStorytelling";
+import belowHeaderBlog from "./components/belowHeaderBlog";
+import aboveFooterBlog from "./components/aboveFooterBlog";
 const App = () => {
   return (
     <Router>
@@ -40,6 +46,7 @@ const App = () => {
       <ServiceWorkerWrapper />
 
       <main className="">
+      <Route path="/blog" component={belowHeaderBlog} />
         <Container>
           <Switch>
             <Route path="/" component={HomePage} exact />
@@ -65,6 +72,7 @@ const App = () => {
             <Route path="/cart/:id?" component={CartPage} />
             <Route path="/user/confirm/:token" component={ConfirmPage} exact />
             <Route path="/blog" component={BlogPage} />
+            <Route path="/blog/:slug" children={<SingleBlog />}></Route>
             <Route path="/home" component={HomePage} />
             <Route path="/shipping" component={ShippingPage} />
             <Route path="/payment" component={PaymentPage} />
@@ -95,6 +103,19 @@ const App = () => {
               exact
             />
             <Route path="/admin/product/:id/edit" component={ProductEditPage} />
+
+            {/* <Route
+              path="/admin/coachlist"
+              exact
+              component={CoachListPage}
+            />
+            <Route
+              path="/admin/coachlist/:pageNumber"
+              component={CoachListPage}
+              exact
+            />
+            <Route path="/admin/coach/:id/edit" component={CoachEditPage} /> */}
+
             <Route path="/admin/orderlist" component={OrderListPage} exact />
             <Route
               path="/admin/orderlist/:pageNumber"
@@ -104,6 +125,7 @@ const App = () => {
             <Route component={ErrorPage} />
           </Switch>
         </Container>
+        <Route path="/blog" component={aboveFooterBlog} />
         <Route path="/coaching" component={aboveFooterCoaching} />
         <Route path="/gifting" component={aboveFooterGifting} />
         <Route path="/storytelling" component={aboveFooterStorytelling} />

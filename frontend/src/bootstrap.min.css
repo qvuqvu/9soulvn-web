@@ -2303,7 +2303,7 @@ progress {
     margin-bottom: 1rem;
     color: #dee2e6;
     vertical-align: top;
-    border-color: #dee2e6
+    border-color: transparent
 }
 
 .table>:not(caption)>*>* {
@@ -2318,7 +2318,8 @@ progress {
 }
 
 .table>thead {
-    vertical-align: bottom
+    vertical-align: bottom;
+    border-bottom-color: #fff;
 }
 
 .table>:not(:last-child)>:last-child>* {
@@ -2362,7 +2363,7 @@ progress {
 
 .table-primary {
     --bs-table-bg: #2C2C2C;
-    --bs-table-striped-bg: #374859;
+    --bs-table-striped-bg: #0e73d7;
     --bs-table-striped-color: #fff;
     --bs-table-active-bg: #415162;
     --bs-table-active-color: #fff;

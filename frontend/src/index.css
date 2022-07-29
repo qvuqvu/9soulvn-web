@@ -1,5 +1,37 @@
 
+body {
+    margin: 0;
+   
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
+  }
+  
+  img {
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  .block__content p {
+    line-height: 1.6;
+  }
+  
+  .block__content h2 {
+    font-weight: 700;
+    font-size: 32px;
+    margin: 10px 0 20px;
+  }
+  
+  @media (min-width: 768px) {
+    img.blog__image {
+      height: 600px;
+      width: 100%;
+    }
+  
+    .block__content p {
+      font-size: 18px;
+    }
+  }
 
 main {
     min-height: 85vh;
