@@ -93,7 +93,7 @@ const Header = () => {
             </LinkContainer>
 
             <LinkContainer to="/storytelling" variant="primary">
-              <Nav.Link>Storytelling</Nav.Link>
+              <Nav.Link>9show</Nav.Link>
             </LinkContainer>
 
             <LinkContainer to="/gifting" variant="primary">
@@ -204,6 +204,9 @@ const Header = () => {
                 </LinkContainer>
                 <LinkContainer to="/admin/showlist">
                   <NavDropdown.Item>Shows</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/admin/coachlist">
+                  <NavDropdown.Item>Coaching</NavDropdown.Item>
                 </LinkContainer>
               </NavDropdown>
             )}
