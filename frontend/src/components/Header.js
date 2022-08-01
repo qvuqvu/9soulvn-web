@@ -157,31 +157,24 @@ const Header = () => {
               </>
             )}
             <LinkContainer to="/cart">
-              <Nav.Link>
+              <Nav.Link className="d-flex">
                 {/* indicate cart size */}
-                {count ? (
-                  <div className="nav-cart-size">
-                    <span
-                      style={
-                        count > 10
-                          ? { fontSize: "0.6em" }
-                          : { fontSize: "0.7em" }
-                      }
-                    >
-                      {count}
-                    </span>
-                  </div>
-                ) : (
-                  ""
-                )}
-                 <img
+               <img
                     src={cart2}
-                    className="navbar-icons"
+                    className="navbar-icons me-1"
                     alt="cart2"
                   /> 
+                 {count ? (
+                  <h4 className='text-center'>
+                  ({count}) 
+                </h4>
+                ) : (
+                  <h2>(0)</h2>
+                )}
                 {!(userInfo && userInfo.isAdmin) || window.innerWidth >= 430
                   ? ""
-                  : ""}
+                  : ""} 
+                
               </Nav.Link>
             </LinkContainer>
             {userInfo && userInfo.isAdmin && (
@@ -255,7 +248,7 @@ const Header = () => {
               </div>
             ) : (
               <LinkContainer to="/login" variant="primary">
-                <Nav.Link>
+                <Nav.Link className="d-flex">
                   {/* <i className="fas fa-user navbar-icons" /> Sign In */}
                   <img
                     src={profile}
