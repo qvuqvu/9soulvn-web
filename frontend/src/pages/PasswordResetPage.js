@@ -81,7 +81,7 @@ const PasswordResetPage = ({ match, history }) => {
 						<InputGroup style={{ width: '100%' }}>
 							<FloatingLabel
 								controlId='passwordinput'
-								label='Password'
+								label='Mật khẩu'
 								className='mb-3'>
 								<Form.Control
 									size='lg'

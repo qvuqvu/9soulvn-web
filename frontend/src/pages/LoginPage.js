@@ -226,7 +226,7 @@ const LoginPage = ({ location, history }) => {
                   <Form.Group controlId="email">
                     <FloatingLabel
                       controlId="emailinput"
-                      label="Email address"
+                      label="Email"
                       className="mb-3"
                     >
                       <Form.Control
@@ -243,7 +243,7 @@ const LoginPage = ({ location, history }) => {
                     <InputGroup>
                       <FloatingLabel
                         controlId="passwordinput"
-                        label="Password"
+                        label="Mật Khẩu"
                         style={{
                           display: "flex",
                           width: "100%",

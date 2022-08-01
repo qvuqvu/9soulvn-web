@@ -109,7 +109,7 @@ const RegisterPage = ({ location, history }) => {
             <Form.Group controlId="name" className="mb-2">
               <FloatingLabel
                 controlId="nameinput"
-                label="Name"
+                label="Tên"
                 className="mb-3"
               >
                 <Form.Control
@@ -124,7 +124,7 @@ const RegisterPage = ({ location, history }) => {
             <Form.Group controlId="email" className="my-2">
               <FloatingLabel
                 controlId="emailinput"
-                label="Email Address"
+                label="Địa chỉ email"
                 className="mb-3"
               >
                 <Form.Control
@@ -140,7 +140,7 @@ const RegisterPage = ({ location, history }) => {
               <InputGroup>
                 <FloatingLabel
                   controlId="passwordinput"
-                  label="Password"
+                  label="Mật khẩu"
                   style={{
                     display: "flex",
                     width: "100%",
@@ -182,7 +182,7 @@ const RegisterPage = ({ location, history }) => {
               <InputGroup>
                 <FloatingLabel
                   controlId="confirmpasswordinput"
-                  label="Confirm password"
+                  label="Nhập lại mật khẩu"
                   style={{ display: "flex", width: "100%" }}
                   className="mb-3"
                 >
