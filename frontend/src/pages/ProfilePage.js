@@ -247,7 +247,7 @@ const ProfilePage = ({ history }) => {
 								pointerEvents: '',
 						  }
 				}>
-				<h2 className='text-center'>My Profile</h2>
+				<h2 className='text-center'>Profile của tôi</h2>
 				{message && (
 					<Message dismissible variant='warning' duration={8}>
 						{message}
@@ -293,7 +293,7 @@ const ProfilePage = ({ history }) => {
 								<div
 									className='image-overlay'
 									onClick={handleImageClick}>
-									Click to upload image
+									Đổi ảnh
 								</div>
 							</div>
 						)}
@@ -476,7 +476,7 @@ const ProfilePage = ({ history }) => {
 				}>
 				{allOrders.length ? (
 					<>
-						<h2 className='text-center'>My Orders</h2>
+						<h2 className='text-center'>Lịch sử mua hàng</h2>
 						{loadingOrdersList ? (
 							<Loader />
 						) : errorOrdersList ? (
@@ -491,11 +491,11 @@ const ProfilePage = ({ history }) => {
 								className='table-sm text-center'>
 								<thead>
 									<tr>
-										<th>DATE</th>
-										<th>TOTAL</th>
-										<th>PAID</th>
-										<th>DELIVERED</th>
-										<th>ACTION</th>
+										<th>Ngày mua</th>
+										<th>Tổng tiền</th>
+										<th>Thanh toán</th>
+										<th>Vận chuyển</th>
+										<th>Chi tiết</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -511,7 +511,7 @@ const ProfilePage = ({ history }) => {
 											</td>
 											<td>
 												{order.totalPrice.toLocaleString(
-													'en-IN',
+													'en-VI',
 													{
 														maximumFractionDigits: 0,
 														style: 'currency',
@@ -552,7 +552,7 @@ const ProfilePage = ({ history }) => {
 														variant='link'
 														className='btn-sm'
 														style={{ margin: '0' }}>
-														Details
+														Xem thêm
 													</Button>
 												</LinkContainer>
 											</td>
