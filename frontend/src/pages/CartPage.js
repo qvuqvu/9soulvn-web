@@ -74,12 +74,12 @@ const CartPage = ({ match, location, history }) => {
 
 	return (
 		<Row>
-			<Meta title='My Cart | Kosells' />
+			<Meta title='Giỏ hàng | 9soul' />
 			<Col md={8}>
-				<h1>Shopping Cart.</h1>
+				<h1>Giỏ hàng của tôi</h1>
 				{!cartItems.length ? (
 					<Message>
-						Your Cart is empty. <Link to='/'>Go Back.</Link>{' '}
+						Giỏ hàng đang trống <Link to='/'>Quay trở lại.</Link>{' '}
 					</Message>
 				) : (
 					<ListGroup variant='flush'>
@@ -198,7 +198,7 @@ const CartPage = ({ match, location, history }) => {
 												width: '50%',
 											}}>
 											{item.price.toLocaleString(
-												'en-IN',
+												'en-vi',
 												{
 													maximumFractionDigits: 2,
 													style: 'currency',
@@ -285,7 +285,7 @@ const CartPage = ({ match, location, history }) => {
 					<Card variant='flush'>
 						<ListGroup.Item>
 							<h2 className='text-center'>
-								Subtotal ({totalItems}) Item
+								Tổng cộng ({totalItems}) sản phẩm
 								{totalItems > 1 && 's'}
 							</h2>
 							<strong>
@@ -295,7 +295,7 @@ const CartPage = ({ match, location, history }) => {
 											acc + item.qty * item.price,
 										0
 									)
-									.toLocaleString('en-IN', {
+									.toLocaleString('en-vi', {
 										maximumFractionDigits: 2,
 										style: 'currency',
 										currency: 'vnd',
@@ -309,7 +309,7 @@ const CartPage = ({ match, location, history }) => {
 									size='lg'
 									disabled={!cartItems.length}
 									onClick={handleCheckout}>
-									Proceed to checkout
+									Đặt hàng
 								</Button>
 							</div>
 						</ListGroup.Item>
