@@ -79,7 +79,7 @@ const HomePage = ({ match, history }) => {
     <>
       <Meta />
       <div class="w-full">
-        <IntroduceHome/>
+        <IntroduceHome />
       </div>
       {/* display carousel only on larger screens */}
       {/* {!keyword ? (
@@ -92,6 +92,21 @@ const HomePage = ({ match, history }) => {
 				</Link>
 			)} */}
       {/* display this search bar on home page on mobile screens */}
+
+      <div className="">
+        <div className="container">
+          <div className="d-flex flex-column  align-items-center justify-content-center">
+            <h1 className="mb-2">9Show</h1>
+            <p className="mb-2">
+              {" "}
+              9 giờ tối, một vài đêm trong tuần, bạn cho mình cái quyền được cô
+              đơn để gặm nhắm vài thứ gia vị mới.
+            </p>
+          </div>
+          <hr width="100%" align="center" />
+        </div>
+      </div>
+
       <div className="d-block d-md-none">
         <SearchBox history={history} />
       </div>
@@ -103,6 +118,20 @@ const HomePage = ({ match, history }) => {
           start shopping.
         </Message>
       ) : null}
+
+      <div className="">
+        <div className="container">
+          <div className="d-flex flex-column  align-items-center justify-content-center">
+            <h1 className="mb-2">Gifting</h1>
+            <p className="mb-2">
+              {" "}
+              9 giờ tối, một vài đêm trong tuần, bạn cho mình cái quyền được cô
+              đơn để gặm nhắm vài thứ gia vị mới.
+            </p>
+          </div>
+          <hr width="100%" align="center" />
+        </div>
+      </div>
 
       {error ? (
         <Message dismissible variant="danger" duration={10}>
@@ -155,6 +184,36 @@ const HomePage = ({ match, history }) => {
           </Row>
         )
       )}
+
+      <div className="">
+        <div className="container">
+          <div className="d-flex flex-column  align-items-center justify-content-center">
+            <h1 className="mb-2">Coaching</h1>
+            <p className="mb-2">
+              9 giờ tối, một vài đêm trong tuần, bạn cho mình cái quyền được cô
+              đơn để gặm nhắm vài thứ gia vị mới.
+            </p>
+          </div>
+          <hr width="100%" align="center" />
+        </div>
+      </div>
+
+
+      <div className="">
+        <div className="container">
+          <div className="d-flex flex-column  align-items-center justify-content-center">
+            <h1 className="mb-2">Blog</h1>
+            <p className="mb-2">
+              9 giờ tối, một vài đêm trong tuần, bạn cho mình cái quyền được cô
+              đơn để gặm nhắm vài thứ gia vị mới.
+            </p>
+          </div>
+          <hr width="100%" align="center" />
+        </div>
+      </div>
+
+      
+
     </>
   );
 };
