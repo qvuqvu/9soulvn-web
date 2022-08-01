@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
-import client from "../client"
+import sanityClient from "../client"
 import BlockContent from "@sanity/block-content-to-react"
 
 export default function SingleBlog() {
@@ -9,7 +9,7 @@ export default function SingleBlog() {
   const { slug } = useParams()
 
   useEffect(() => {
-    client
+    sanityClient
       .fetch(
         `*[slug.current == "${slug}"] {
         title,

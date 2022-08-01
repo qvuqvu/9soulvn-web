@@ -13,7 +13,7 @@ import SearchBox from "../components/SearchBox";
 import ProductSkeleton from "../components/ProductSkeleton";
 import Introduce from "../components/introduce";
 import IntroduceHome from "../components/introduceHome";
-import client from "../client";
+import sanityClient from "../client";
 const BlogPage = ({ match, history }) => {
   // get the products list, userinfo and user details form the redix store
   const productList = useSelector((state) => state.productList);
@@ -71,7 +71,7 @@ const BlogPage = ({ match, history }) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    client
+    sanityClient
       .fetch(
         `*[_type == "post"] {
         category,
@@ -104,18 +104,17 @@ const BlogPage = ({ match, history }) => {
         <Row>
           {posts.map((post) => (
             <Col sm={12} md={6} lg={4} xl={3}>
-              <article key={post.slug.current}>
-                <img src={post.mainImage.asset.url} alt={post.title} />
-                <strong className="text-xl mt-2 fs-6">{post.title}</strong>
-                <button className="mt-5 mb-10">
-                  <Link
-                    to={`/blog/${post.slug.current}`}
+               <Link
+                    to={"/blog/" + post.slug.current}
                     className="py-2 px-6 rounded shadow text-white bg-black hover:bg-transparent border-2 border-black transition-all duration-500 hover:text-black font-bold"
                   >
-                    Read Full Article
-                  </Link>
-                </button>
-              </article>
+                    <article key={post.slug.current}>
+                <img src={post.mainImage.asset.url} alt={post.title} />
+                <strong className="text-xl mt-2 fs-6">{post.title}</strong>
+                <p>{post.tilte}</p>
+                
+              </article> </Link>
+              
             </Col>
           ))}
         </Row>
