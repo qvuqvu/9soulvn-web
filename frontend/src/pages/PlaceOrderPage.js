@@ -56,9 +56,9 @@ const PlaceOrderPage = ({ history }) => {
 		0
 	);
 
-	cart.shippingPrice = cart.itemsPrice > 8000 ? 500 : 300;
+	cart.shippingPrice = cart.itemsPrice > 200000 ? 0 : 35000;
 	cart.taxPrice = 0.18 * cart.itemsPrice;
-	cart.totalPrice = cart.itemsPrice + cart.taxPrice + cart.shippingPrice;
+	cart.totalPrice = cart.itemsPrice +  cart.shippingPrice;
 
 	const handleOrder = (e) => {
 		e.preventDefault();
@@ -87,9 +87,9 @@ const PlaceOrderPage = ({ history }) => {
 						<Col md={8}>
 							<ListGroup variant='flush'>
 								<ListGroup.Item>
-									<h2>Shipping</h2>
+									<h2>Địa chỉ giao hàng</h2>
 									<p>
-										<strong>Address: </strong>{' '}
+										<strong>Địa chỉ: </strong>{' '}
 										{shippingAddress.address},{' '}
 										{shippingAddress.city}-
 										{shippingAddress.postalCode},{' '}
@@ -97,14 +97,14 @@ const PlaceOrderPage = ({ history }) => {
 									</p>
 								</ListGroup.Item>
 								<ListGroup.Item>
-									<h2>Payment Method</h2>
+									<h2>Phương thức thanh toán</h2>
 									<p>
-										<strong>Method: </strong>{' '}
+										<strong>Phương thức: </strong>{' '}
 										{paymentMethod}
 									</p>
 								</ListGroup.Item>
 								<ListGroup.Item>
-									<h2>Cart Items</h2>
+									<h2>Sản phẩm</h2>
 									{cartItems.length !== 0 ? (
 										<ListGroup variant='flush'>
 											{cartItems.map((item, idx) => (
@@ -132,7 +132,7 @@ const PlaceOrderPage = ({ history }) => {
 																item.qty *
 																item.price
 															).toLocaleString(
-																'en-IN',
+																'en-vi',
 																{
 																	maximumFractionDigits: 2,
 																	style: 'currency',
@@ -146,7 +146,7 @@ const PlaceOrderPage = ({ history }) => {
 											))}
 										</ListGroup>
 									) : (
-										<Message>Your cart is empty</Message>
+										<Message>Giỏ hàng còn trống</Message>
 									)}
 								</ListGroup.Item>
 							</ListGroup>
@@ -156,18 +156,18 @@ const PlaceOrderPage = ({ history }) => {
 								<ListGroup variant='flush'>
 									<ListGroup.Item className='text-center'>
 										<h2 className='text-center'>
-											Order Summary
+											Đơn hàng của bạn
 										</h2>
 									</ListGroup.Item>
 									<ListGroup.Item>
 										<Row>
 											<Col>
-												<strong>Subtotal</strong>
+												<strong>Tổng tiền sản phẩm</strong>
 											</Col>
 											<Col>
 												{Number(
 													cart.itemsPrice
-												).toLocaleString('en-IN', {
+												).toLocaleString('en-vi', {
 													maximumFractionDigits: 2,
 													style: 'currency',
 													currency: 'vnd',
@@ -178,12 +178,12 @@ const PlaceOrderPage = ({ history }) => {
 									<ListGroup.Item>
 										<Row>
 											<Col>
-												<strong>Shipping</strong>
+												<strong>Phí shipping</strong>
 											</Col>
 											<Col>
 												{Number(
 													cart.shippingPrice
-												).toLocaleString('en-IN', {
+												).toLocaleString('en-vi', {
 													maximumFractionDigits: 2,
 													style: 'currency',
 													currency: 'vnd',
@@ -191,31 +191,16 @@ const PlaceOrderPage = ({ history }) => {
 											</Col>
 										</Row>
 									</ListGroup.Item>
+									
 									<ListGroup.Item>
 										<Row>
 											<Col>
-												<strong>Tax</strong>
-											</Col>
-											<Col>
-												{Number(
-													cart.taxPrice
-												).toLocaleString('en-IN', {
-													maximumFractionDigits: 2,
-													style: 'currency',
-													currency: 'vnd',
-												})}
-											</Col>
-										</Row>
-									</ListGroup.Item>
-									<ListGroup.Item>
-										<Row>
-											<Col>
-												<strong>Total</strong>
+												<strong>Tổng cộng</strong>
 											</Col>
 											<Col>
 												{Number(
 													cart.totalPrice
-												).toLocaleString('en-IN', {
+												).toLocaleString('en-vi', {
 													maximumFractionDigits: 2,
 													style: 'currency',
 													currency: 'vnd',
@@ -239,7 +224,7 @@ const PlaceOrderPage = ({ history }) => {
 											size='lg'
 											disabled={!cartItems.length}
 											onClick={handleOrder}>
-											Place Order
+											Đặt hàng
 										</Button>
 									</ListGroup.Item>
 								</ListGroup>
