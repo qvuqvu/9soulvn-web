@@ -63,7 +63,7 @@ const ShippingPage = ({ history }) => {
 	return (
 		<FormContainer>
 			<CheckoutStatus step1 step2 />
-			<h1>Shipping Address</h1>
+			<h1>Địa chỉ giao hàng</h1>
 			<Form onSubmit={handleSubmit}>
 				<Form.Group controlId='address'>
 					<FloatingLabel
@@ -133,7 +133,7 @@ const ShippingPage = ({ history }) => {
 							padding: '0.5em 1em',
 							width: '8rem',
 						}}>
-						Continue
+						Tiếp tục
 					</Button>
 				</div>
 			</Form>
