@@ -46,7 +46,7 @@ const App = () => {
       <ServiceWorkerWrapper />
 
       <main className="">
-      <Route path="/blog" component={belowHeaderBlog} />
+        <Route path="/blog" component={belowHeaderBlog} />
         <Container>
           <Switch>
             <Route path="/" component={HomePage} exact />
@@ -66,18 +66,20 @@ const App = () => {
             <Route path="/gifting" component={Gifting} />
             <Route path="/storytelling" component={StorytellingPage} />
             <Route path="/coaching" component={CoachingPage} />
+            <Route path="/coach/:id" component={CoachPage} />
             <Route path="/profile" component={ProfilePage} />
             <Route path="/product/:id" component={ProductPage} />
             <Route path="/show/:id" component={ShowPage} />
             <Route path="/cart/:id?" component={CartPage} />
             <Route path="/user/confirm/:token" component={ConfirmPage} exact />
             <Route path="/blog" component={BlogPage} />
-            <Route path="/blog/:slug" children={<SingleBlog />}></Route>
+            <Route path="/blog/:slug" component= {HomePage} />
             <Route path="/home" component={HomePage} />
             <Route path="/shipping" component={ShippingPage} />
             <Route path="/payment" component={PaymentPage} />
             <Route path="/placeorder" component={PlaceOrderPage} />
             <Route path="/order/:id" component={OrderPage} />
+
             <Route path="/admin/userlist" component={UserListPage} exact />
             <Route
               path="/admin/userlist/:pageNumber"
@@ -102,7 +104,18 @@ const App = () => {
               component={ProductListPage}
               exact
             />
-            <Route path="/admin/product/:id/edit" component={ProductEditPage} />
+
+            <Route
+              path="/admin/coachlist"
+              exact
+              component={CoachListPage}
+            />
+            <Route
+              path="/admin/coachlist/:pageNumber"
+              component={CoachListPage}
+              exact
+            />
+            <Route path="/admin/coach/:id/edit" component={CoachEditPage} />
 
             {/* <Route
               path="/admin/coachlist"
