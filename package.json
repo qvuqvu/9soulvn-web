@@ -16,7 +16,6 @@
     "data:import": "node backend/seeder.js",
     "data:destroy": "node backend/seeder.js -d",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
-    
   },
   "repository": {
     "type": "git",
@@ -29,6 +28,7 @@
   },
   "homepage": "https://github.com/Rajatm544/MERN-Ecommerce#readme",
   "dependencies": {
+    "@sanity/block-content-to-react": "^3.0.0",
     "aws-sdk": "^2.983.0",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
