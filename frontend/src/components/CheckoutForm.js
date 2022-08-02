@@ -103,7 +103,7 @@ const CheckoutForm = ({ price, orderID }) => {
 			</Form.Group>
 			<div className='d-grid'>
 				<Button disabled={!stripe} size='lg' type='submit'>
-					Pay Now
+					Thanh toán
 				</Button>
 			</div>
 		</Form>
