@@ -6,17 +6,9 @@ const IntroduceHome = () => {
           <div className="h1 ">9soul.vn</div>
           <div className="h2 mt-4">Thảnh thơi tìm tới</div>
           <hr width="100%" align="center" />
-          <div className="mt-[3%] mb-[3%] text-[16px] text-White font-head">
-            Cảm ơn đã chọn 9soul như một trạm nạp cảm xúc của một đôi lần muốn
-            “Thảnh thơi tìm tới” – MC’s
-          </div>
-          <hr width="100%" align="center" />
-          <div className="mt-5">
-            Chúng mình tin rằng, rồi sau cùng của cuộc đời, chúng ta cũng chỉ
-            mong có thể gói gém mấy chục năm khôn lớn lại thành một câu chuyện
-            đáng để nghe. Và trong một khoảnh khắc định mệnh nào đó, câu chuyện
-            ấy chính là cảm hứng.
-          </div>
+          
+          <div className="mt-2">
+          Ở đây có một không gian thảnh thơi với những câu chuyện chân thành, những cảm xúc thật thà và những con chữ mộc mạc... để bạn lắng nghe, tin tưởng và thương mình nhiều hơn một chút...           </div>
         </div>
 
         <div className="col">

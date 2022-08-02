@@ -96,12 +96,9 @@ const HomePage = ({ match, history }) => {
       <div className="">
         <div className="container">
           <div className="d-flex flex-column  align-items-center ml-">
-            <h1 className="mb-2">9Show</h1>
+            <h1 className="mb-2">9show</h1>
             <p className="mb-2">
-              {" "}
-              9 giờ tối, một vài đêm trong tuần, bạn cho mình cái quyền được cô
-              đơn để gặm nhắm vài thứ gia vị mới.
-            </p>
+            9 giờ tối, một vài đêm trong tuần, bạn cho mình cái quyền được cô đơn để gặm nhắm vài thứ gia vị mới...            </p>
           </div>
           <hr width="100%" align="center" />
         </div>
@@ -151,7 +148,7 @@ const HomePage = ({ match, history }) => {
       </div>
 
       <div className="d-flex justify-content-center mt-5">
-        <Link className="btn btn-all my-2 px-4 py-2" to="/storytelling">
+        <Link className="btn btn-all my-2 px-4 py-2" to="/9show">
           Tất cả buổi trình diễn
         </Link>
       </div>
@@ -173,9 +170,7 @@ const HomePage = ({ match, history }) => {
           <div className="d-flex flex-column  align-items-center justify-content-center">
             <h1 className="mb-2">Gifting</h1>
             <p className="mb-2">
-              {" "}
-              9 giờ tối, một vài đêm trong tuần, bạn cho mình cái quyền được cô
-              đơn để gặm nhắm vài thứ gia vị mới.
+            Mấy món đồ bé xíu để lâu lâu giận dỗi cuộc đời thì lấy ra chơi, và quên mất mình từng có một nỗi buồn to bự.
             </p>
           </div>
           <hr width="100%" align="center" />
@@ -245,8 +240,7 @@ const HomePage = ({ match, history }) => {
           <div className="d-flex flex-column  align-items-center justify-content-center">
             <h1 className="mb-2">Coaching</h1>
             <p className="mb-2">
-              9 giờ tối, một vài đêm trong tuần, bạn cho mình cái quyền được cô
-              đơn để gặm nhắm vài thứ gia vị mới.
+            Những cuộc chuyện trò cơi nới hiểu biết về mình, người và đời để bạn bớt dại mà lớn lên
             </p>
           </div>
           <hr width="100%" align="center" />
