@@ -29,6 +29,7 @@
   "homepage": "https://github.com/Rajatm544/MERN-Ecommerce#readme",
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/client": "^3.3.2",
     "aws-sdk": "^2.983.0",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
