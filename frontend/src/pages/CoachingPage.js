@@ -1,29 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import Product from "../components/Product";
+import Coach from "../components/Coach";
 import Paginate from "../components/Paginate";
 import { Row, Col } from "react-bootstrap";
 import ProductCarousel from "../components/ProductCarousel";
 import Meta from "../components/Meta";
-import { listProducts } from "../actions/productActions";
+import { listCoachs } from "../actions/coachActions";
 import { refreshLogin, getUserDetails } from "../actions/userActions";
 import Message from "../components/Message";
 import SearchBox from "../components/SearchBox";
 import ProductSkeleton from "../components/ProductSkeleton";
 import Introduce from "../components/introduce";
 import IntroduceHome from "../components/introduceHome";
+
 const CoachingPage = ({ match, history }) => {
   const keyword = match.params.keyword; // to search for products
   const pageNumber = Number(match.params.pageNumber) || 1; // current page number in the paginated display
   const [promptVerfication, setPromptVerification] = useState(false); // prompt user to verify email if not yet confirmed
-  const [products, setProducts] = useState(null);
-  const [productAvailable, setProductAvailable] = useState(false);
+  const [coach, setCoach] = useState(null);
+  const [coachAvailable, setCoachAvailable] = useState(false);
   const dispatch = useDispatch();
 
-  // get the products list, userinfo and user details form the redix store
-  const productList = useSelector((state) => state.productList);
-  let { loading, error, pages } = productList;
+  // get the Coachs list, userinfo and user details form the redix store
+  const coachList = useSelector((state) => state.coachList);
+  let { loading, error, pages } = coachList;
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
@@ -48,23 +49,23 @@ const CoachingPage = ({ match, history }) => {
     }
   }, [userInfoError, dispatch, userInfo]);
 
-  // set a state variable to true or false depending on if products is avialable in the state
+  // set a state variable to true or false depending on if coachs is avialable in the state
   useEffect(() => {
-    if (products) {
-      products.length ? setProductAvailable(true) : setProductAvailable(false);
+    if (coach) {
+      coach.length ? setCoachAvailable(true) : setCoachAvailable(false);
     }
-  }, [products]);
+  }, [coach]);
 
   // fetch products from redux store into local state
   useEffect(() => {
-    if (productList) {
-      if (productList.products) setProducts([...productList.products]);
+    if (coachList) {
+      if (coachList.coach) setCoach([...coachList.coach]);
     }
-  }, [productList]);
+  }, [coachList]);
 
   // list products based on keyword and pagenumber
   useEffect(() => {
-    dispatch(listProducts(keyword, pageNumber));
+    dispatch(listCoachs(keyword, pageNumber));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, keyword, pageNumber]);
 
@@ -79,36 +80,36 @@ const CoachingPage = ({ match, history }) => {
     <>
       <Meta />
       <div class="w-full">
-      <div className="container">
-      <div className="row align-items-center">
-        <div className="col align-self-center">
-          <div className="h1 ">9soul.vn / coaching</div>
-          <div className="h2 mt-4">growing up together</div>
-          <hr width="100%" align="center" />
-          <div className="mt-[3%] mb-[3%] text-[16px] text-White font-head">
-            Cảm ơn đã chọn 9soul như một trạm nạp cảm xúc của một đôi lần muốn
-            “Thảnh thơi tìm tới” – MC’s
-          </div>
-          <hr width="100%" align="center" />
-          <div className="mt-5">
-            Chúng mình tin rằng, rồi sau cùng của cuộc đời, chúng ta cũng chỉ
-            mong có thể gói gém mấy chục năm khôn lớn lại thành một câu chuyện
-            đáng để nghe. Và trong một khoảnh khắc định mệnh nào đó, câu chuyện
-            ấy chính là cảm hứng.
-          </div>
-        </div>
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col align-self-center">
+              <div className="h1 ">9soul.vn / coaching</div>
+              <div className="h2 mt-4">growing up together</div>
+              <hr width="100%" align="center" />
+              <div className="mt-[3%] mb-[3%] text-[16px] text-White font-head">
+                Cảm ơn đã chọn 9soul như một trạm nạp cảm xúc của một đôi lần
+                muốn “Thảnh thơi tìm tới” – MC’s
+              </div>
+              <hr width="100%" align="center" />
+              <div className="mt-5">
+                Chúng mình tin rằng, rồi sau cùng của cuộc đời, chúng ta cũng
+                chỉ mong có thể gói gém mấy chục năm khôn lớn lại thành một câu
+                chuyện đáng để nghe. Và trong một khoảnh khắc định mệnh nào đó,
+                câu chuyện ấy chính là cảm hứng.
+              </div>
+            </div>
 
-        <div className="col">
-          <div class="row justify-content-center">
-            <img
-              className="w-auto"
-              src="https://i.imgur.com/BYyeYyy.png"
-              alt=""
-            />
+            <div className="col">
+              <div class="row justify-content-center">
+                <img
+                  className="w-auto"
+                  src="https://i.imgur.com/BYyeYyy.png"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
       </div>
       {/* display carousel only on larger screens */}
       {/* {!keyword ? (
@@ -133,57 +134,103 @@ const CoachingPage = ({ match, history }) => {
         </Message>
       ) : null}
 
-      {error ? (
-        <Message dismissible variant="danger" duration={10}>
-          {error}
-        </Message>
-      ) : !loading && products ? (
-        <>
-          <Row>
-            {products.length
-              ? products.map((product) => {
-                  return (
-                    <Col sm={12} md={6} lg={4} xl={3} key={product._id}>
-                      <Product product={product} />
-                    </Col>
-                  );
-                })
-              : keyword &&
-                !productAvailable && (
-                  //   show this only if user has searched for some item and it is not available
-                  <Col className="text-center">
-                    <div>
-                      <i className="far fa-frown" /> No items found for this
-                      search query
-                    </div>
-                    Go Back to the <Link to="/Home">Home Page</Link>
-                  </Col>
-                )}
-          </Row>
-          <Paginate
-            className="mt-auto text-center"
-            page={pageNumber}
-            keyword={keyword ? keyword : ""}
-            pages={pages}
-          />
-        </>
-      ) : (
-        loading &&
-        products &&
-        products.length === 0 && (
-          <Row>
-            {[1, 2, 3, 4].map((ele) => {
-              return (
-                <Col sm={12} md={6} lg={4} xl={3} key={ele}>
-                  <div>
-                    <ProductSkeleton />
+      <div className="">
+        <div className="container">
+          <div className="d-flex flex-column  align-items-center justify-content-center">
+            <h1 className="mb-2">Tất cả khóa học</h1>
+            <p className="mb-2">
+              9 giờ tối, một vài đêm trong tuần, bạn cho mình cái quyền được cô
+              đơn để gặm nhắm vài thứ gia vị mới.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="container">
+        <Link to={`/coach/62e92154df94c24f6412f3ad`}>
+          <div className="d-flex flex-row cardUp justify-content-center ms-6 ">
+            <div className=" row card-body ">
+              <div className="col-auto">
+                <img
+                  className=" img-fluid"
+                  src="https://i.imgur.com/Ip0xAZT.jpg"
+                  alt="coaching"
+                />
+              </div>
+              <div className="col-6">
+                <div className="row justify-content-between">
+                  <div className="col-auto">title</div>
+                  <div className="col-auto">19h00 | 27/8/2022</div>
+                </div>
+                <hr width="100%" align="center" />
+                <div className="row ">
+                  <div className="col-auto  h7">
+                    KHOÁ HỌC PUBLIC SPEAKING THUYẾT PHỤC VÀ CẢM XÚC
                   </div>
-                </Col>
-              );
-            })}
-          </Row>
-        )
-      )}
+                </div>
+                <div className="row ">
+                  <div className="col-auto">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint
+                  </div>
+                </div>
+
+                <div className="row mt-6">
+                  <div className="col ">
+                    <a href="#" class="cardUp-link">
+                      Xem chi tiết
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </div>
+
+      <div className="container">
+        <Link to={`/coach/62e9528527ef1a0f588bb089`}>
+          <div className="d-flex flex-row cardUp justify-content-center ms-6 ">
+            <div className=" row card-body ">
+              <div className="col-auto">
+                <img
+                  className=" img-fluid"
+                  src="https://i.imgur.com/Ip0xAZT.jpg"
+                  alt="coaching"
+                />
+              </div>
+              <div className="col-6">
+                <div className="row justify-content-between">
+                  <div className="col-auto">title</div>
+                  <div className="col-auto">19h00 | 27/8/2022</div>
+                </div>
+                <hr width="100%" align="center" />
+                <div className="row ">
+                  <div className="col-auto  h7">
+                    NÓI ĐỂ HIỂU, THƯƠNG VÀ ÔM LẤY CHÍNH MÌNH
+                  </div>
+                </div>
+                <div className="row ">
+                  <div className="col-auto">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint
+                  </div>
+                </div>
+
+                <div className="row mt-6">
+                  <div className="col ">
+                    <a href="#" class="cardUp-link">
+                      Xem chi tiết
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </div>
+
+      
+     
     </>
   );
 };

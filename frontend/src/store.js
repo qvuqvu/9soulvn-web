@@ -47,8 +47,25 @@ import {
 	orderListAllReducer,
 } from './reducers/orderReducers';
 
+import {
+	coachListReducer,
+	coachDetailsReducer,
+	coachDeleteReducer,
+	coachCreateReducer,
+	coachCreateReviewReducer,
+	coachUpdateReducer,
+	coachTopRatedReducer,
+} from './reducers/coachReducers';
+
 // combine all the above reducers to the store
 const reducer = combineReducers({
+	coachList: coachListReducer,
+	coachDetails: coachDetailsReducer,
+	coachDelete: coachDeleteReducer,
+	coachCreate: coachCreateReducer,
+	coachCreateReview: coachCreateReviewReducer,
+	coachUpdate: coachUpdateReducer,
+	coachTopRated: coachTopRatedReducer,
 	showList: showListReducer,
 	showDetails: showDetailsReducer,
 	showDelete: showDeleteReducer,

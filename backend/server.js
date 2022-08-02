@@ -21,6 +21,7 @@ import configRoutes from './routes/configRoutes.js';
 import uploadRoutes from './routes/uploadRoutes.js';
 import setupPassport from './config/passportSetup.js';
 import showRoutes from './routes/showRoutes.js';
+import coachRoutes from './routes/coachRoutes.js';
 
 dotenv.config();
 const app = express();
@@ -53,7 +54,8 @@ setupPassport();
 
 // configure all the routes
 app.use('/api/products', productRoutes);
-app.use('/api/shows',showRoutes)
+app.use('/api/shows',showRoutes);
+app.use('/api/coach',coachRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/orders', orderRoutes);

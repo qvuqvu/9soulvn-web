@@ -9,6 +9,7 @@ import Order from './models/orderModel.js';
 import Token from './models/tokenModel.js';
 import connectDB from './config/db.js';
 import Show from './models/showModel.js'
+import Coach from './models/coachModel.js'
 dotenv.config();
 connectDB();
 
@@ -20,7 +21,8 @@ const importData = async () => {
 		await Order.deleteMany();
 		await Token.deleteMany();
 		await Show.deleteMany();
-
+		await Coach.deleteMany();
+		
 		// create an array os users to seed into the DB
 		const newUsers = await User.insertMany(users);
 
