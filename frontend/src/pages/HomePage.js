@@ -95,7 +95,7 @@ const HomePage = ({ match, history }) => {
 
       <div className="">
         <div className="container">
-          <div className="d-flex flex-column  align-items-center justify-content-center">
+          <div className="d-flex flex-column  align-items-center ml-">
             <h1 className="mb-2">9Show</h1>
             <p className="mb-2">
               {" "}
@@ -105,6 +105,55 @@ const HomePage = ({ match, history }) => {
           </div>
           <hr width="100%" align="center" />
         </div>
+      </div>
+
+      <div className="container">
+        <Link to={`/show/62d391680785c8536c0b0f38`}>
+          <div className="d-flex flex-row cardUp justify-content-center ms-6 ">
+            <div className=" row card-body ">
+              <div className="col-auto">
+                <img
+                  className=" img-fluid"
+                  src="https://i.imgur.com/nkwfvPT.jpg"
+                  alt="coaching"
+                />
+              </div>
+              <div className="col-6">
+                <div className="row justify-content-between">
+                  <div className="col-auto">title</div>
+                  <div className="col-auto">19h00 | 27/8/2022</div>
+                </div>
+                <hr width="100%" align="center" />
+                <div className="row ">
+                  <div className="col-auto  h7">
+                    {" "}
+                    Amet minim mollit non deserunt ullamco est sit
+                  </div>
+                </div>
+                <div className="row ">
+                  <div className="col-auto">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint
+                  </div>
+                </div>
+
+                <div className="row mt-6">
+                  <div className="col ">
+                    <a href="#" class="cardUp-link">
+                      Xem chi tiết
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </div>
+
+      <div className="d-flex justify-content-center mt-5">
+        <Link className="btn btn-all my-2 px-4 py-2" to="/storytelling">
+          Tất cả buổi trình diễn
+        </Link>
       </div>
 
       <div className="d-block d-md-none">
@@ -185,6 +234,12 @@ const HomePage = ({ match, history }) => {
         )
       )}
 
+      <div className="d-flex justify-content-center mt-5 mb-3">
+        <Link className="btn btn-all my-2 px-4 py-2" to="/gifting">
+          Tất cả sản phẩm
+        </Link>
+      </div>
+
       <div className="">
         <div className="container">
           <div className="d-flex flex-column  align-items-center justify-content-center">
@@ -198,8 +253,55 @@ const HomePage = ({ match, history }) => {
         </div>
       </div>
 
+      <div className="container">
+        <Link to={`/show/62d391680785c8536c0b0f38`}>
+          <div className="d-flex flex-row cardUp justify-content-center ms-6 ">
+            <div className=" row card-body ">
+              <div className="col-auto">
+                <img
+                  className=" img-fluid"
+                  src="https://i.imgur.com/Ip0xAZT.jpg"
+                  alt="coaching"
+                />
+              </div>
+              <div className="col-6">
+                <div className="row justify-content-between">
+                  <div className="col-auto">title</div>
+                  <div className="col-auto">19h00 | 27/8/2022</div>
+                </div>
+                <hr width="100%" align="center" />
+                <div className="row ">
+                  <div className="col-auto  h7">
+                    KHOÁ HỌC PUBLIC SPEAKING THUYẾT PHỤC VÀ CẢM XÚC
+                  </div>
+                </div>
+                <div className="row ">
+                  <div className="col-auto">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint
+                  </div>
+                </div>
 
-      <div className="">
+                <div className="row mt-6">
+                  <div className="col ">
+                    <a href="#" class="cardUp-link">
+                      Xem chi tiết
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </div>
+
+      <div className="d-flex justify-content-center mt-5 mb-3">
+        <Link className="btn btn-all my-2 px-4 py-2" to="/coaching">
+          Tất cả khoá học
+        </Link>
+      </div>
+
+      {/* <div className="">
         <div className="container">
           <div className="d-flex flex-column  align-items-center justify-content-center">
             <h1 className="mb-2">Blog</h1>
@@ -210,10 +312,7 @@ const HomePage = ({ match, history }) => {
           </div>
           <hr width="100%" align="center" />
         </div>
-      </div>
-
-      
-
+      </div> */}
     </>
   );
 };
