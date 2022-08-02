@@ -115,7 +115,7 @@ const OrderPage = ({ match, history }) => {
 		</Message>
 	) : (
 		<>
-			<h2>Order {orderID}</h2>
+			<h2>Đơn hàng {orderID}</h2>
 			<Row>
 				{loading ? (
 					<Loader />
@@ -124,9 +124,9 @@ const OrderPage = ({ match, history }) => {
 						<Col md={8}>
 							<ListGroup variant='flush'>
 								<ListGroup.Item>
-									<h2>Shipping</h2>
+									<h2>Thông tin nhận hàng</h2>
 									<p>
-										<strong>Name: </strong>
+										<strong>Tên: </strong>
 										{order.user.name}
 									</p>
 									<p>
@@ -136,7 +136,7 @@ const OrderPage = ({ match, history }) => {
 										</a>
 									</p>
 									<p>
-										<strong>Address: </strong>{' '}
+										<strong>Địa chỉ: </strong>{' '}
 										{order.shippingAddress.address},{' '}
 										{order.shippingAddress.city}-
 										{order.shippingAddress.postalCode},{' '}
@@ -145,39 +145,39 @@ const OrderPage = ({ match, history }) => {
 									<div>
 										{order.isDelivered ? (
 											<Message variant='success'>
-												Delivered at:{' '}
+												Đã giao hàng lúc:{' '}
 												{getDateString(
 													order.deliveredAt
 												)}
 											</Message>
 										) : (
 											<Message variant='danger'>
-												Not Delivered
+												Chưa giao hàng
 											</Message>
 										)}
 									</div>
 								</ListGroup.Item>
 								<ListGroup.Item>
-									<h2>Payment Method</h2>
+									<h2>Phương thức thanh toán</h2>
 									<p>
-										<strong>Method: </strong>{' '}
+										<strong>Phương thức: </strong>{' '}
 										{order.paymentMethod}
 									</p>
 									<div>
 										{order.isPaid ? (
 											<Message variant='success'>
-												Paid at:{' '}
+												Thanh toán lúc:{' '}
 												{getDateString(order.paidAt)}
 											</Message>
 										) : (
 											<Message variant='danger'>
-												Not Paid
+												Chưa thanh toán
 											</Message>
 										)}
 									</div>
 								</ListGroup.Item>
 								<ListGroup.Item>
-									<h2>Cart Items</h2>
+									<h2>Sản phẩm</h2>
 									{order.orderItems.length !== 0 ? (
 										<ListGroup variant='flush'>
 											<div
@@ -214,7 +214,7 @@ const OrderPage = ({ match, history }) => {
 																	item.qty *
 																	item.price
 																).toLocaleString(
-																	'en-IN',
+																	'en-vi',
 																	{
 																		maximumFractionDigits: 2,
 																		style: 'currency',
@@ -229,7 +229,7 @@ const OrderPage = ({ match, history }) => {
 											)}
 										</ListGroup>
 									) : (
-										<Message>No order</Message>
+										<Message>Không có đơn hàng</Message>
 									)}
 								</ListGroup.Item>
 							</ListGroup>
@@ -239,7 +239,7 @@ const OrderPage = ({ match, history }) => {
 								<ListGroup variant='flush'>
 									<ListGroup.Item>
 										<h2 className='text-center'>
-											Order Summary
+											Đơn hàng của bạn
 										</h2>
 									</ListGroup.Item>
 									{error && (
@@ -255,11 +255,11 @@ const OrderPage = ({ match, history }) => {
 									<ListGroup.Item>
 										<Row>
 											<Col>
-												<strong>Subtotal</strong>
+												<strong>Tổng tiền sản phẩm</strong>
 											</Col>
 											<Col>
 												{order.itemsPrice.toLocaleString(
-													'en-IN',
+													'en-vi',
 													{
 														maximumFractionDigits: 2,
 														style: 'currency',
@@ -272,11 +272,11 @@ const OrderPage = ({ match, history }) => {
 									<ListGroup.Item>
 										<Row>
 											<Col>
-												<strong>Shipping</strong>
+												<strong>Phí shipping</strong>
 											</Col>
 											<Col>
 												{order.shippingPrice.toLocaleString(
-													'en-IN',
+													'en-vi',
 													{
 														maximumFractionDigits: 2,
 														style: 'currency',
@@ -286,31 +286,15 @@ const OrderPage = ({ match, history }) => {
 											</Col>
 										</Row>
 									</ListGroup.Item>
+									
 									<ListGroup.Item>
 										<Row>
 											<Col>
-												<strong>Tax</strong>
-											</Col>
-											<Col>
-												{order.taxPrice.toLocaleString(
-													'en-IN',
-													{
-														maximumFractionDigits: 2,
-														style: 'currency',
-														currency: 'vnd',
-													}
-												)}
-											</Col>
-										</Row>
-									</ListGroup.Item>
-									<ListGroup.Item>
-										<Row>
-											<Col>
-												<strong>Total</strong>
+												<strong>Tổng cộng</strong>
 											</Col>
 											<Col>
 												{order.totalPrice.toLocaleString(
-													'en-IN',
+													'en-vi',
 													{
 														maximumFractionDigits: 2,
 														style: 'currency',
@@ -373,7 +357,7 @@ const OrderPage = ({ match, history }) => {
 										order.isPaid &&
 										!order.isDelivered && (
 											<ListGroup.Item>
-												{loadingDeliver && <Loader />}
+												{loadingDeliver && <Loader 	/>}
 												<div className='d-grid'>
 													<Button
 														type='button'
