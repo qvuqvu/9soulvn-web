@@ -142,7 +142,7 @@ const ShowListPage = ({ history, match }) => {
 											<td>
 												{show.price &&
 													show.price.toLocaleString(
-														'en-IN',
+														'en-vi',
 														{
 															maximumFractionDigits: 2,
 															style: 'currency',
