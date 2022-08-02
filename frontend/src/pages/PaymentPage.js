@@ -63,7 +63,7 @@ const PaymentPage = ({ history }) => {
 					flexFlow: 'column nowrap',
 					alignItems: 'center',
 				}}>
-				<h1>Payment Method</h1>
+				<h1>Phương thức thanh toán</h1>
 				<Form onSubmit={handleSubmit}>
 					<Form.Group>
 						<Col>
@@ -80,18 +80,18 @@ const PaymentPage = ({ history }) => {
 							<Form.Check
 								inline
 								type='radio'
-								label='PayPal Account'
+								label=' Ví Momo'
 								id='PayPal'
 								name='paymentMethod'
-								value='PayPal'
-								checked={paymentMethod === 'PayPal'}
+								value='Momo'
+								checked={paymentMethod === 'Momo'}
 								onChange={handleChange}
 							/>
 						</Col>
 					</Form.Group>
 					<div className='d-grid'>
 						<Button type='submit' className='my-3' size='lg'>
-							Continue
+							Tiếp tục
 						</Button>
 					</div>
 				</Form>
