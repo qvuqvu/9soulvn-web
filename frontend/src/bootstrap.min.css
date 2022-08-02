@@ -341,10 +341,7 @@ a {
     text-decoration:none;  
 }
 
-a:hover {
-    color: #E52521
-    
-}
+
 
 a:not([href]):not([class]),
 a:not([href]):not([class]):hover {
@@ -3517,6 +3514,23 @@ fieldset:disabled .btn {
     border-color: #233240
 }
 
+.btn-all {
+    color: #EAEAEA;
+    background-color: transparent ;
+    border-color: #EAEAEA;
+    border-width: 1px;
+    ;
+    border-radius: 40px;
+}
+
+.btn-all:hover {
+    color: #EAEAEA;
+    background-color: #E52521;
+    border-color: #EAEAEA;
+    border-width: 1px;
+    border-radius: 40px;
+}
+
 .product-icons {
     fill: rgb(141, 73, 73);
 
@@ -3883,13 +3897,13 @@ fieldset:disabled .btn {
 
 .btn-outline-primary {
     color: #2C2C2C;
-    border-color: #2C2C2C
+    border-color: #ffffff
 }
 
 .btn-outline-primary:hover {
     color: #fff;
     background-color: #2C2C2C;
-    border-color: #2C2C2C
+    border-color: #ffffff
 }
 
 .btn-check:focus+.btn-outline-primary,
@@ -5683,15 +5697,19 @@ fieldset:disabled .btn {
 /*Upcomming shows card*/
 
 .cardUp {
-    position: relative;
+    
     display: -ms-flexbox;
     display: flex;
+    justify-content: center;
+    
     -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
+    flex-direction: row;
+   
+    width: 70%;
     word-wrap: break-word;
     background-clip: border-box;
-    border-radius: .90rem
+    border-radius: .90rem;
+    background-color: #2C2C2C;
 }
 
 .cardUp>hr {
@@ -5741,13 +5759,21 @@ fieldset:disabled .btn {
 }
 
 .cardUp-link+.cardUp-link {
-    margin-left: 1rem
+    margin-left: 1rem;
+    text-decoration: underline;
+    
+}
+
+.cardUp-link {
+   
+    text-decoration: underline;
+    
 }
 
 .cardUp-header {
     padding: .5rem 1rem;
     margin-bottom: 5;
-    background-color: rgba(0, 0, 0, .03);
+    background-color: rgba(196, 25, 25, 0.03);
     border-bottom: 1px solid rgba(0, 0, 0, .125)
 }
 
@@ -8906,6 +8932,10 @@ fieldset:disabled .btn {
     margin-top: 3rem !important
 }
 
+.mt-6 {
+    margin-top: 7rem !important
+}
+
 .mt-auto {
     margin-top: auto !important
 }
@@ -8991,7 +9021,7 @@ fieldset:disabled .btn {
 }
 
 .ms-6 {
-    margin-left: 22rem !important
+    margin-left: 10rem !important
 }
 
 .ms-auto {
