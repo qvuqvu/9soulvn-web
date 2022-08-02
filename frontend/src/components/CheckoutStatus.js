@@ -15,15 +15,15 @@ const CheckoutStatus = ({ step1, step2, step3, step4 }) => {
 				<div
 					className='circle'
 					style={
-						step1 ? { background: '#2c3e50' } : { background: '' }
+						step1 ? { background: '#E52521' } : { background: '' }
 					}
 				/>
 				{step1 ? (
 					<LinkContainer to='/login'>
-						<Nav.Link>Sign In</Nav.Link>
+						<Nav.Link>Đăng nhập</Nav.Link>
 					</LinkContainer>
 				) : (
-					<Nav.Link disabled>Sign In</Nav.Link>
+					<Nav.Link disabled>Đăng nhập</Nav.Link>
 				)}
 			</div>
 			<div className='connection' />
@@ -32,16 +32,16 @@ const CheckoutStatus = ({ step1, step2, step3, step4 }) => {
 					className='circle'
 					style={
 						step1 && step2
-							? { background: '#2c3e50' }
+							? { background: '#E52521' }
 							: { background: '' }
 					}
 				/>
 				{step2 ? (
 					<LinkContainer to='/shipping'>
-						<Nav.Link>Shipping</Nav.Link>
+						<Nav.Link>Địa chỉ</Nav.Link>
 					</LinkContainer>
 				) : (
-					<Nav.Link disabled>Shipping</Nav.Link>
+					<Nav.Link disabled>Địa chỉ</Nav.Link>
 				)}
 			</div>
 			<div className='connection' />
@@ -51,16 +51,16 @@ const CheckoutStatus = ({ step1, step2, step3, step4 }) => {
 					className='circle'
 					style={
 						step1 && step2 && step3
-							? { background: '#2c3e50' }
+							? { background: '#E52521' }
 							: { background: '' }
 					}
 				/>
 				{step3 ? (
 					<LinkContainer to='/payment'>
-						<Nav.Link>Payment</Nav.Link>
+						<Nav.Link>Thanh toán</Nav.Link>
 					</LinkContainer>
 				) : (
-					<Nav.Link disabled>Payment</Nav.Link>
+					<Nav.Link disabled>Thanh toán</Nav.Link>
 				)}
 			</div>
 			<div className='connection' />
@@ -70,7 +70,7 @@ const CheckoutStatus = ({ step1, step2, step3, step4 }) => {
 					className='circle'
 					style={
 						step1 && step2 && step3 && step4
-							? { background: '#2c3e50' }
+							? { background: '#E52521' }
 							: { background: '' }
 					}
 				/>
