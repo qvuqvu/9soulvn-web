@@ -60,7 +60,7 @@ const Footer = () => {
               <hr width="87%" size="50px" align="center" />
               <div className="mt-4">
                 <p className="text-[14px] font-body font-medium">
-                  85, Phan Kế Bính, Quận 1, Tp.HCM
+                  122-124 B2, Sala Urban Area, HCMC
                 </p>
               </div>
               <div className="mt-3">
