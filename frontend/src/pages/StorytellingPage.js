@@ -84,7 +84,7 @@ const StorytellingPage = ({ match, history }) => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col align-self-center">
-              <div className="h1 ">9soul.vn / storytelling</div>
+              <div className="h1 ">9soul.vn / 9show</div>
               <div className="h2 mt-4">Reset your soul</div>
               <hr width="100%" align="center" />
               <div className="mt-[3%] mb-[3%] text-[16px] text-White font-head">
@@ -173,12 +173,6 @@ const StorytellingPage = ({ match, history }) => {
         </Link>
       </div>
 
-      <div className="d-flex justify-content-center mt-5">
-        <Link className="btn btn-all my-2 px-4 py-2" to="/storytelling">
-          Tất cả buổi trình diễn
-        </Link>
-      </div>
-      
       <div className="w-full">
         <div className="container">
           <div className="d-flex flex-column  align-items-center justify-content-center">
