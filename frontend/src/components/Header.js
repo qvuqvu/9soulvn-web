@@ -92,7 +92,7 @@ const Header = () => {
               <Nav.Link>Trang chủ</Nav.Link>
             </LinkContainer>
 
-            <LinkContainer to="/storytelling" variant="primary">
+            <LinkContainer to="/9show" variant="primary">
               <Nav.Link>9show</Nav.Link>
             </LinkContainer>
 

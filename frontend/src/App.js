@@ -64,7 +64,7 @@ const App = () => {
               component={PasswordResetPage}
             />
             <Route path="/gifting" component={Gifting} />
-            <Route path="/storytelling" component={StorytellingPage} />
+            <Route path="/9show" component={StorytellingPage} />
             <Route path="/coaching" component={CoachingPage} />
             <Route path="/coach/:id" component={CoachPage} />
             <Route path="/profile" component={ProfilePage} />
