@@ -111,7 +111,7 @@ const CartPage = ({ match, location, history }) => {
 											alignItems: 'center',
 											justifyContent: 'space-evenly',
 										}}>
-										{item.price.toLocaleString('en-IN', {
+										{item.price.toLocaleString('en-vi', {
 											maximumFractionDigits: 2,
 											style: 'currency',
 											currency: 'vnd',
