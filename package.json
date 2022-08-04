@@ -15,7 +15,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node backend/seeder.js",
     "data:destroy": "node backend/seeder.js -d",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend && sanity deploy"
   },
   "repository": {
     "type": "git",
@@ -57,6 +57,7 @@
     "stripe": "^8.176.0"
   },
   "devDependencies": {
+    "@sanity/cli": "^2.30.3",
     "concurrently": "^6.2.0",
     "nodemon": "^2.0.8"
   }
