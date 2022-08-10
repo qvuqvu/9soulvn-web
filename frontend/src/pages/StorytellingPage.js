@@ -84,19 +84,19 @@ const StorytellingPage = ({ match, history }) => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col align-self-center">
-              <div className="h1 ">9soul.vn / 9show</div>
-              <div className="h2 mt-4">Reset your soul</div>
+              <div className="h1 ">9soul.vn / storytelling</div>
+              <div className="h2 mt-4">thảnh thơi cho đời bớt vội</div>
               <hr width="100%" align="center" />
               <div className="mt-[3%] mb-[3%] text-[16px] text-White font-head">
-                Cảm ơn đã chọn 9soul như một trạm nạp cảm xúc của một đôi lần
-                muốn “Thảnh thơi tìm tới” – MC’s
+                Cùng ru lại lòng mình bằng những câu chuyện
+                chẳng-cần-biết-ai-đóng-vai-chính… – MC’s
               </div>
               <hr width="100%" align="center" />
               <div className="mt-5">
-                Chúng mình tin rằng, rồi sau cùng của cuộc đời, chúng ta cũng
-                chỉ mong có thể gói gém mấy chục năm khôn lớn lại thành một câu
-                chuyện đáng để nghe. Và trong một khoảnh khắc định mệnh nào đó,
-                câu chuyện ấy chính là cảm hứng.
+                Nhìn cái cách mà một ai đó đu đưa mình theo một giai điệu, lẩm
+                bẩm vài vần thơ, hay đơn giản là vươn tay ra với lấy… một tia
+                nắng đầu ngày khiến tụi mình tin rằng, ai cũng có một “nghệ sĩ
+                bé" ở trong mình.
               </div>
             </div>
 
@@ -334,7 +334,6 @@ const StorytellingPage = ({ match, history }) => {
           <a href="#">Google Podcasts</a>
         </div>
       </div>
-
     </>
   );
 };
