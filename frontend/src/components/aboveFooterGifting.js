@@ -12,7 +12,7 @@ const Footer = () => {
     />
     <div class="centered ">
       <p class="h1">gifting</p>
-      <p class="h2">Gieo vài điều nhỏ xíu</p>
+      <p class="h2">gieo vài điều nhỏ xíu</p>
     </div>
   </div>
   );
