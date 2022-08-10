@@ -84,18 +84,17 @@ const CoachingPage = ({ match, history }) => {
           <div className="row align-items-center">
             <div className="col align-self-center">
               <div className="h1 ">9soul.vn / coaching</div>
-              <div className="h2 mt-4">growing up together</div>
+              <div className="h2 mt-4">lớn lên cùng nhau</div>
               <hr width="100%" align="center" />
               <div className="mt-[3%] mb-[3%] text-[16px] text-White font-head">
-                Cảm ơn đã chọn 9soul như một trạm nạp cảm xúc của một đôi lần
-                muốn “Thảnh thơi tìm tới” – MC’s
+                Đôi khi bạn chỉ cần một người lắng nghe kiên nhẫn đủ… để đặt cho
+                bạn những câu hỏi gợi mở cách nhìn và hướng đi - MC’s
               </div>
               <hr width="100%" align="center" />
               <div className="mt-5">
-                Chúng mình tin rằng, rồi sau cùng của cuộc đời, chúng ta cũng
-                chỉ mong có thể gói gém mấy chục năm khôn lớn lại thành một câu
-                chuyện đáng để nghe. Và trong một khoảnh khắc định mệnh nào đó,
-                câu chuyện ấy chính là cảm hứng.
+                Là nơi để bạn đến, trò chuyện và nhận ra vài điều suýt nữa thì
+                quên: Mình là ai? Mình thích gì? Thành công có phải lúc nào cũng
+                cần vĩ đại? Hạnh phúc là đích đến hay hành trình?
               </div>
             </div>
 
@@ -228,9 +227,6 @@ const CoachingPage = ({ match, history }) => {
           </div>
         </Link>
       </div>
-
-      
-     
     </>
   );
 };
