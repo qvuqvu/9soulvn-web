@@ -4762,7 +4762,7 @@ fieldset:disabled .btn {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding-left: 0;
+    padding-left: 6;
     margin-bottom: 0;
     list-style: none
 }
@@ -4903,7 +4903,7 @@ fieldset:disabled .btn {
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-pack: justify;
-    justify-content: space-between
+    justify-content: space-around
 }
 
 .navbar-brand {
@@ -4926,7 +4926,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-nav .nav-link {
-    padding-right: 0;
+    padding-right: 5rem;
     padding-left: 0
 }
 
@@ -5153,7 +5153,7 @@ fieldset:disabled .btn {
     }
 
     .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: .5rem;
+        padding-right: 40px;
         padding-left: .5rem
     }
 
