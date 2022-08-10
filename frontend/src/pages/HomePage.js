@@ -78,7 +78,7 @@ const HomePage = ({ match, history }) => {
   return (
     <>
       <Meta />
-      <div class="w-full">
+      <div class="w-full mb-5">
         <IntroduceHome />
       </div>
       {/* display carousel only on larger screens */}
@@ -96,11 +96,12 @@ const HomePage = ({ match, history }) => {
       <div className="">
         <div className="container">
           <div className="d-flex flex-column  align-items-center ml-">
-            <h1 className="mb-2">9show</h1>
-            <p className="mb-2">
-            9 giờ tối, một vài đêm trong tuần, bạn cho mình cái quyền được cô đơn để gặm nhắm vài thứ gia vị mới...            </p>
+            <div className="mb-2 h2">Storytelling</div>
+            <p className="mb-2 mt-3 text-center">
+              9 giờ tối, một vài đêm trong tuần, bạn cho mình cái quyền được cô
+              đơn <br /> để gặm nhắm vài thứ gia vị mới...{" "}
+            </p>
           </div>
-          <hr width="100%" align="center" />
         </div>
       </div>
 
@@ -115,7 +116,7 @@ const HomePage = ({ match, history }) => {
                   alt="coaching"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-6 pt-4 ms-2 ">
                 <div className="row justify-content-between">
                   <div className="col-auto">title</div>
                   <div className="col-auto">19h00 | 27/8/2022</div>
@@ -134,7 +135,7 @@ const HomePage = ({ match, history }) => {
                   </div>
                 </div>
 
-                <div className="row mt-6">
+                <div className="row mt-5">
                   <div className="col ">
                     <a href="#" class="cardUp-link">
                       Xem chi tiết
@@ -147,11 +148,13 @@ const HomePage = ({ match, history }) => {
         </Link>
       </div>
 
-      <div className="d-flex justify-content-center mt-5">
-        <Link className="btn btn-all my-2 px-4 py-2" to="/9show">
+      <div className="d-flex justify-content-center mt-5 mb-5">
+        <Link className="btn btn-all my-2 px-4 py-2" to="/storytelling">
           Tất cả buổi trình diễn
         </Link>
       </div>
+
+      <hr width="100%" align="center" />
 
       <div className="d-block d-md-none">
         <SearchBox history={history} />
@@ -167,13 +170,13 @@ const HomePage = ({ match, history }) => {
 
       <div className="">
         <div className="container">
-          <div className="d-flex flex-column  align-items-center justify-content-center">
-            <h1 className="mb-2">Gifting</h1>
-            <p className="mb-2">
-            Mấy món đồ bé xíu để lâu lâu giận dỗi cuộc đời thì lấy ra chơi, và quên mất mình từng có một nỗi buồn to bự.
+          <div className="d-flex flex-column  align-items-center ml-">
+            <div className="mb-2 h2">Gifting</div>
+            <p className="mb-5 mt-3 text-center">
+              Mấy món đồ bé xíu, dễ cưng... để lâu lâu giận dỗi cuộc đời thì lấy
+              ra chơi, <br /> và quên mất mình từng có một nỗi buồn to bự.
             </p>
           </div>
-          <hr width="100%" align="center" />
         </div>
       </div>
 
@@ -229,21 +232,23 @@ const HomePage = ({ match, history }) => {
         )
       )}
 
-      <div className="d-flex justify-content-center mt-5 mb-3">
+      <div className="d-flex justify-content-center mt-5 mb-5">
         <Link className="btn btn-all my-2 px-4 py-2" to="/gifting">
           Tất cả sản phẩm
         </Link>
       </div>
 
+      <hr width="100%" align="center" />
+
       <div className="">
         <div className="container">
-          <div className="d-flex flex-column  align-items-center justify-content-center">
-            <h1 className="mb-2">Coaching</h1>
-            <p className="mb-2">
-            Những cuộc chuyện trò cơi nới hiểu biết về mình, người và đời để bạn bớt dại mà lớn lên
+          <div className="d-flex flex-column  align-items-center ml-">
+            <div className="mb-2 h2">Coaching</div>
+            <p className="mb-2 mt-3 text-center">
+              Những cuộc chuyện trò cơi nới tư duy và vỗ về cảm xúc, <br/> trên
+              hành trình trân trọng, nâng niu và khai sáng chính mình
             </p>
           </div>
-          <hr width="100%" align="center" />
         </div>
       </div>
 
@@ -258,7 +263,7 @@ const HomePage = ({ match, history }) => {
                   alt="coaching"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-6 pt-4 ms-2">
                 <div className="row justify-content-between">
                   <div className="col-auto">title</div>
                   <div className="col-auto">19h00 | 27/8/2022</div>
@@ -276,7 +281,7 @@ const HomePage = ({ match, history }) => {
                   </div>
                 </div>
 
-                <div className="row mt-6">
+                <div className="row mt-5">
                   <div className="col ">
                     <a href="#" class="cardUp-link">
                       Xem chi tiết
@@ -289,7 +294,7 @@ const HomePage = ({ match, history }) => {
         </Link>
       </div>
 
-      <div className="d-flex justify-content-center mt-5 mb-3">
+      <div className="d-flex justify-content-center mt-5 mb-5">
         <Link className="btn btn-all my-2 px-4 py-2" to="/coaching">
           Tất cả khoá học
         </Link>
