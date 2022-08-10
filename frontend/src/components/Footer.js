@@ -76,7 +76,7 @@ const Footer = () => {
               <hr width="87%" size="50px" align="center" />
               <div className="pt-[5%]">
                 <a href="#">Facebook</a> | <a href="#">Instagram</a> |{" "}
-                <a href="#">You tube</a>
+                <a href="#">Youtube</a>
               </div>
             </div>
           </div>
@@ -86,7 +86,7 @@ const Footer = () => {
           <div className="col">
             <div className="bg-dark-gray pt-[1%] pb-[1%] text-White">
               <p className="font-semibold font-[16px] font-body">
-                © Copyright 2022 & Made with by 9soul
+                © Copyright 2022 & Made with ❤   by 9soul
               </p>
             </div>
           </div>
