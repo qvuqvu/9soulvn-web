@@ -77,7 +77,7 @@ const Header = () => {
           <LinkContainer to="/home">
             <Navbar.Brand>
               <img
-                src="https://i.imgur.com/5TnrJeD.png"
+                src="https://i.imgur.com/zn2t6bQ.png"
                 className="w-full"
                 alt="logo"
               />
@@ -92,8 +92,8 @@ const Header = () => {
               <Nav.Link>Trang chủ</Nav.Link>
             </LinkContainer>
 
-            <LinkContainer to="/9show" variant="primary">
-              <Nav.Link>9show</Nav.Link>
+            <LinkContainer to="/storytelling" variant="primary">
+              <Nav.Link>Storytelling</Nav.Link>
             </LinkContainer>
 
             <LinkContainer to="/gifting" variant="primary">
