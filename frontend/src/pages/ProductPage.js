@@ -160,7 +160,7 @@ const ProductPage = ({ history, match }) => {
           <Meta title={`${product.name}`} />
           <Row class="row justify-content-center">
             <Col>
-              <ImageMagnifier
+              <img
                 src={product.image}
                 alt={product.name}
                 title={product.name}
