@@ -136,31 +136,36 @@ const StorytellingPage = ({ match, history }) => {
             <div className=" row card-body ">
               <div className="col-auto">
                 <img
-                  className=" img-fluid"
-                  src="https://i.imgur.com/nkwfvPT.jpg"
+                  className="card-img"
+                  src="https://i.imgur.com/1D8GcQF.jpg"
                   alt="coaching"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-6 ">
                 <div className="row justify-content-between">
-                  <div className="col-auto">title</div>
-                  <div className="col-auto">19h00 | 27/8/2022</div>
+                  <div className="col-auto">
+                    {" "}
+                    SÀI GÒN | ĐÊM NHẠC VỀ NGHE YÊU KỂ: “BỖNG DƯNG THẤY YÊU”
+                  </div>
+                  <div className="col-auto">19h00 -21h30 | 23/04/2021</div>
                 </div>
                 <hr width="100%" align="center" />
                 <div className="row ">
-                  <div className="col-auto  h7">
-                    {" "}
-                    Amet minim mollit non deserunt ullamco est sit
+                  <div className="col-auto  h7 pb-2 ">
+                    Đến với đêm nhạc Về Nghe Yêu Kể lần này, bạn sẽ được đắm
+                    chìm trong không gian nơi tụi mình dùng âm nhạc và ngôn từ
+                    để kể chuyện tình yêu vốn nhiều trăn trở
                   </div>
                 </div>
                 <div className="row ">
-                  <div className="col-auto">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint
+                  <div className="col-auto h8 pb-2">
+                    Đứng trước cửa của hạnh phúc, đứng trước một bàn tay đang
+                    hướng về mình: cầm chặt hay buông lơi mới là lựa chọn đúng?
+                    Đến để tìm câu trả lời nhé. 
                   </div>
                 </div>
 
-                <div className="row mt-6">
+                <div className="row ">
                   <div className="col ">
                     <a href="#" class="cardUp-link">
                       Xem chi tiết
