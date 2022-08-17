@@ -10,7 +10,7 @@ const Show = ({ show }) => {
 			<Link to={`/show/${show._id}`}>
 				<Card.Img
 					loading='lazy'
-					className='product-image'	
+					className='card-img-top'	
 					src={show.image}
 					variant='top'
 					alt={show.name}
