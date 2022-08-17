@@ -5634,7 +5634,9 @@ fieldset:disabled .btn {
 .card-img,
 .card-img-bottom ,
 .card-img-top {
-    width: 100%
+    width: 100%;
+    height: 256px;
+    object-fit: cover
 }
 
 
