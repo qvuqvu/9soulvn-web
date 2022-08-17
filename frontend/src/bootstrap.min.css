@@ -249,7 +249,16 @@ h7 {
      font-family: var(--bs-body-font-family);
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 12px;
+    line-height: 150%;
+}
+
+.h8,
+h8 {
+     font-family: var(--bs-body-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
     line-height: 150%;
 }
 p {
@@ -710,12 +719,12 @@ progress {
 }
 
 .img-thumbnail {
-    padding: .25rem;
+    padding: .30rem;
     background-color: #fff;
-    border: 1px solid #dee2e6;
-    border-radius: .25rem;
-    max-width: 100%;
-    height: auto
+    border: 0px solid #dee2e6;
+    border-radius: .30rem;
+    max-width: 354px ;
+    height: 265px
 }
 
 .figure {
@@ -5628,13 +5637,12 @@ fieldset:disabled .btn {
     width: 100%
 }
 
-.card-img,
+
 .card-img-top {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px
+    border-radius: 20px;
 }
 
-.card-img,
+
 .card-img-bottom {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px
