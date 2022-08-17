@@ -13,6 +13,7 @@ import SearchBox from "../components/SearchBox";
 import ProductSkeleton from "../components/ProductSkeleton";
 import Introduce from "../components/introduce";
 import IntroduceHome from "../components/introduceHome";
+import Upcomingshow from "../components/Upcomingshow";
 const HomePage = ({ match, history }) => {
   const keyword = match.params.keyword; // to search for products
   const pageNumber = Number(match.params.pageNumber) || 1; // current page number in the paginated display
@@ -105,48 +106,7 @@ const HomePage = ({ match, history }) => {
         </div>
       </div>
 
-      <div className="container">
-        <Link to={`/show/62d391680785c8536c0b0f38`}>
-          <div className="d-flex flex-row cardUp justify-content-center ms-6 ">
-            <div className=" row card-body ">
-              <div className="col-auto">
-                <img
-                  className=" img-fluid"
-                  src="https://i.imgur.com/nkwfvPT.jpg"
-                  alt="coaching"
-                />
-              </div>
-              <div className="col-6 pt-4 ms-2 ">
-                <div className="row justify-content-between">
-                  <div className="col-auto">title</div>
-                  <div className="col-auto">19h00 | 27/8/2022</div>
-                </div>
-                <hr width="100%" align="center" />
-                <div className="row ">
-                  <div className="col-auto  h7">
-                    {" "}
-                    Amet minim mollit non deserunt ullamco est sit
-                  </div>
-                </div>
-                <div className="row ">
-                  <div className="col-auto">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint
-                  </div>
-                </div>
-
-                <div className="row mt-5">
-                  <div className="col ">
-                    <a href="#" class="cardUp-link">
-                      Xem chi tiết
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Link>
-      </div>
+     <Upcomingshow/>
 
       <div className="d-flex justify-content-center mt-5 mb-5">
         <Link className="btn btn-all my-2 px-4 py-2" to="/storytelling">
