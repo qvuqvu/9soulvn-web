@@ -11,7 +11,7 @@ const Product = ({ product }) => {
       <Link to={`/product/${product._id}`}>
         <Card.Img
           loading="lazy"
-          className="product-image"
+          className="card-img-top"
           src={product.image}
           variant="top"
           alt={product.name}
