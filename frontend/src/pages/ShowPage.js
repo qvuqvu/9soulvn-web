@@ -155,7 +155,8 @@ const ShowPage = ({ history, match }) => {
           <Meta title={`${show.name}`} />
           <Row class="row justify-content-center">
             <Col>
-              <ImageMagnifier
+              <img
+                
                 src={show.image}
                 alt={show.name}
                 title={show.name}
