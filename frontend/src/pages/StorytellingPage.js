@@ -279,19 +279,19 @@ const StorytellingPage = ({ match, history }) => {
       </div>
       <div className="mt-5 mb-5 d-flex flex-row pt-[5%] h5 justify-content-center">
         <div>
-          <a href="#">Spotify</a>
+          <a href="https://open.spotify.com/show/26Dzx6WQHFpRe1bQlaqCem">Spotify</a>
         </div>
         <div>|</div>
         <div>
-          <a href="#">Soundcloud</a>
+          <a href="https://on.soundcloud.com/1xfD ">Soundcloud</a>
         </div>
         <div>|</div>
         <div>
-          <a href="#">Apple Podcast</a>
+          <a href="https://podcasts.apple.com/vn/podcast/9show/id1569966557">Apple Podcast</a>
         </div>
         <div>|</div>
         <div>
-          <a href="#">Google Podcasts</a>
+          <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy81Y2Y4NDNmOC9wb2RjYXN0L3Jzcw">Google Podcasts</a>
         </div>
       </div>
     </>
