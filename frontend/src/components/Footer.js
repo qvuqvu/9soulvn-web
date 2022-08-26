@@ -31,22 +31,22 @@ const Footer = () => {
               </div>
               <hr width="53%" size="50px" align="center" />
               <div className="mt-4">
-                <a className="  text-[14px] font-body font-medium" href="#">
+                <a className="  text-[14px] font-body font-medium" href="/storytelling">
                   Storytelling
                 </a>
               </div>
               <div className="mt-3">
-                <a className="text-[14px] font-body font-medium" href="#">
+                <a className="text-[14px] font-body font-medium" href="/gifting">
                   Gifting
                 </a>
               </div>
               <div className="mt-3">
-                <a className="text-[14px] font-body font-medium" href="#">
+                <a className="text-[14px] font-body font-medium" href="/coaching">
                   Coaching
                 </a>
               </div>
               <div className="mt-3">
-                <a className="text-[14px] font-body font-medium" href="#">
+                <a className="text-[14px] font-body font-medium" href="https://branding.9soul.vn/">
                   Branding
                 </a>
               </div>
