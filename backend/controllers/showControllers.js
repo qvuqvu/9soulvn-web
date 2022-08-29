@@ -72,6 +72,8 @@ const createShow = asyncHandler(async (req, res) => {
 		user: req.user._id,
 		image: '/images/alexa.jpg',
 		description: 'Sample description',
+		date: 'date',
+		place: 'place',
 	});
 	const createdShow = await show.save();
 	res.status(201).json(createdShow);
@@ -89,6 +91,8 @@ const updateShow = asyncHandler(async (req, res) => {
 		numReviews,
 		countInStock,
 		description,
+		date,
+		place,
 		image,
 	} = req.body;
 	const show = await Show.findById(req.params.id);
@@ -102,6 +106,8 @@ const updateShow = asyncHandler(async (req, res) => {
 		if (numReviews) show.numReviews = numReviews;
 		if (countInStock) show.countInStock = countInStock;
 		if (description) show.description = description;
+		if (place) show.place = place;
+		if (date) show.date = date;
 		if (image) show.image = image;
 
 		const updatedShow = await show.save();
