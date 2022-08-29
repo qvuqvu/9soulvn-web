@@ -18,6 +18,8 @@ const ShowEditPage = ({ match, history }) => {
 	const [brand, setBrand] = useState('');
 	const [category, setCategory] = useState('');
 	const [description, setDescription] = useState('');
+	const [place, setPlace] = useState('');
+	const [date, setDate] = useState('');
 	const [image, setImage] = useState('');
 	const [price, setPrice] = useState(0.0);
 	const [countInStock, setCountInStock] = useState(0);
@@ -80,6 +82,8 @@ const ShowEditPage = ({ match, history }) => {
 				setBrand(show.brand);
 				setCategory(show.category);
 				setDescription(show.description);
+				setPlace(show.place);
+				setDate(show.date);
 				setCountInStock(show.countInStock);
 			}
 		}
@@ -96,6 +100,8 @@ const ShowEditPage = ({ match, history }) => {
 				price,
 				category,
 				description,
+				date,
+				place,
 				countInStock,
 				image,
 			})
@@ -294,6 +300,38 @@ const ShowEditPage = ({ match, history }) => {
 											value={category}
 											onChange={(e) =>
 												setCategory(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='date'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Date'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter place URL'
+											type='text'
+											value={date}
+											onChange={(e) =>
+												setDate(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='place'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Place'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter place URL'
+											type='text'
+											value={place}
+											onChange={(e) =>
+												setPlace(e.target.value)
 											}
 										/>
 									</FloatingLabel>
