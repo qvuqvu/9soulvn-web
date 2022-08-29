@@ -45,15 +45,15 @@ const showSchema = mongoose.Schema(
 		},
 		description1: {
 			type: String,
-			required: true,
+			required: false,
 		},
 		description2: {
 			type: String,
-			required: true,
+			required: false,
 		},
 		description3: {
 			type: String,
-			required: true,
+			required: false,
 		},
 		place: {
 			type: String,
@@ -61,15 +61,15 @@ const showSchema = mongoose.Schema(
 		},
 		image1: {
 			type: String,
-			required: true,
+			required: false,
 		},
 		image2: {
 			type: String,
-			required: true,
+			required: false,
 		},
 		image3: {
 			type: String,
-			required: true,
+			required: false,
 		},
 		date: {
 			type: String,
