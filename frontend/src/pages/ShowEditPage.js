@@ -18,8 +18,14 @@ const ShowEditPage = ({ match, history }) => {
 	const [brand, setBrand] = useState('');
 	const [category, setCategory] = useState('');
 	const [description, setDescription] = useState('');
+	const [description1, setDescription1] = useState('');
+	const [description2, setDescription2] = useState('');
+	const [description3, setDescription3] = useState('');
 	const [place, setPlace] = useState('');
 	const [date, setDate] = useState('');
+	const [image3, setImage3] = useState('');
+	const [image2, setImage2] = useState('');
+	const [image1, setImage1] = useState('');
 	const [image, setImage] = useState('');
 	const [price, setPrice] = useState(0.0);
 	const [countInStock, setCountInStock] = useState(0);
@@ -79,6 +85,7 @@ const ShowEditPage = ({ match, history }) => {
 				setName(show.name);
 				setPrice(show.price);
 				setImage(show.image);
+				setImage1(show.image1);
 				setBrand(show.brand);
 				setCategory(show.category);
 				setDescription(show.description);
@@ -104,6 +111,7 @@ const ShowEditPage = ({ match, history }) => {
 				place,
 				countInStock,
 				image,
+				image1,
 			})
 		);
 	};
@@ -343,11 +351,107 @@ const ShowEditPage = ({ match, history }) => {
 										className='mb-3'>
 										<Form.Control
 											size='lg'
-											placeholder='Enter description URL'
+											placeholder='Enter descriptionL'
 											type='text'
 											value={description}
 											onChange={(e) =>
 												setDescription(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='description'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Description 2'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter description'
+											type='text'
+											value={description1}
+											onChange={(e) =>
+												setDescription1(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='description'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Description 3'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter description'
+											type='text'
+											value={description2}
+											onChange={(e) =>
+												setDescription2(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='description'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Description 4'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter description'
+											type='text'
+											value={description3}
+											onChange={(e) =>
+												setDescription3(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='image1'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Image 2'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter description URL'
+											type='text'
+											value={image1}
+											onChange={(e) =>
+												setImage1(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='image1'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Image 3'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter description URL'
+											type='text'
+											value={image2}
+											onChange={(e) =>
+												setImage2(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='image1'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Image 4'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter description URL'
+											type='text'
+											value={image3}
+											onChange={(e) =>
+												setImage3(e.target.value)
 											}
 										/>
 									</FloatingLabel>
