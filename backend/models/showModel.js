@@ -43,6 +43,14 @@ const showSchema = mongoose.Schema(
 			type: String,
 			required: true,
 		},
+		place: {
+			type: String,
+			required: true,
+		},
+		date: {
+			type: String,
+			required: true,
+		},
 		// store an array of review objs
 		reviews: [reviewsSchema],
 		rating: {
