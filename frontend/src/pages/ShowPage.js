@@ -141,7 +141,7 @@ const ShowPage = ({ history, match }) => {
 
   return (
     <>
-      <Link className="btn btn-all my-2" to="/storytelling">
+      <Link className="btn btn-all my-2 mb-2" to="/storytelling">
         Quay lại
       </Link>
       {show && (!show._id || show._id !== match.params.id) ? (
@@ -158,8 +158,23 @@ const ShowPage = ({ history, match }) => {
               <div>
                 <img src={show.image} alt={show.name} title={show.name} />
                 <div>
-                  <strong>NỘI DUNG</strong> <br/> {show.description}
+                  <strong>Nội dung</strong> <br /> {show.description} <br />
                 </div>
+                <img src={show.image1} alt={show.name} title={show.name} />
+                <div>
+                  <strong>Người kể chuyện truyền cảm hứng:</strong> <br />{" "}
+                  {show.description1} <br />
+                </div>
+                <div>
+                  <strong>Người hát tình ca:</strong> <br />{" "}
+                  {show.description2} <br />
+                </div>
+                <div>
+                  <strong>*Lưu ý:</strong> <br />{" "}
+                  {show.description3} <br />
+                </div>
+                <img src={show.image2} alt={show.name} title={show.name} />
+                <img src={show.image3} alt={show.name} title={show.name} />
               </div>
             </Col>
             <Col className="col-4">
@@ -170,12 +185,14 @@ const ShowPage = ({ history, match }) => {
                     <h7>{show.name}</h7>
                   </ListGroup.Item>
                   <ListGroup.Item className="h4">
-                    {show.price &&
-                      show.price.toLocaleString("en-VI", {
-                        maximumFractionDigits: 2,
-                        style: "currency",
-                        currency: "vnd",
-                      })}
+                    {show.countInStock > 0
+                      ? show.price &&
+                        show.price.toLocaleString("en-VI", {
+                          maximumFractionDigits: 2,
+                          style: "currency",
+                          currency: "vnd",
+                        })
+                      : "HẾT VÉ"}
                   </ListGroup.Item>
                   <ListGroup.Item>{show.date}</ListGroup.Item>
                   <ListGroup.Item>{show.place}</ListGroup.Item>
@@ -189,9 +206,9 @@ const ShowPage = ({ history, match }) => {
                   <ListGroup variant="flush"></ListGroup>
                   <ListGroup variant="flush">
                     <ListGroup.Item>
-                      <Row>
+                      {/* <Row>
                         <Col>{show.countInStock > 0 ? "Còn Vé" : "Hết Vé"}</Col>
-                      </Row>
+                      </Row> */}
                     </ListGroup.Item>
                     {show.countInStock > 0 && (
                       <ListGroup.Item>
