@@ -158,7 +158,7 @@ const ShowPage = ({ history, match }) => {
               <div>
                 <img src={show.image} alt={show.name} title={show.name} />
                 <div>
-                  <strong>Nội dung</strong> <br /> {show.description} <br />
+                <br /><strong>Nội dung</strong> <br /> {show.description} <br />
                 </div>
                 <img src={show.image1} alt={show.name} title={show.name} /> <br />
                 <div>
