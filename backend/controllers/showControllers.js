@@ -72,6 +72,12 @@ const createShow = asyncHandler(async (req, res) => {
 		user: req.user._id,
 		image: '/images/alexa.jpg',
 		description: 'Sample description',
+		description1: 'Sample description',
+		description2: 'Sample description',
+		description3: 'Sample description',
+		image1: '/images/alexa.jpg',
+		image2: '/images/alexa.jpg',
+		image3: '/images/alexa.jpg',
 		date: 'date',
 		place: 'place',
 	});
