@@ -97,9 +97,15 @@ const updateShow = asyncHandler(async (req, res) => {
 		numReviews,
 		countInStock,
 		description,
+		description1,
+		description2,
+		description3,
 		date,
 		place,
 		image,
+		image1,
+		image2,
+		image3,
 	} = req.body;
 	const show = await Show.findById(req.params.id);
 
@@ -112,9 +118,15 @@ const updateShow = asyncHandler(async (req, res) => {
 		if (numReviews) show.numReviews = numReviews;
 		if (countInStock) show.countInStock = countInStock;
 		if (description) show.description = description;
+		if (description1) show.description1 = description1;
+		if (description2) show.description2 = description2;
+		if (description3) show.description3 = description3;
 		if (place) show.place = place;
 		if (date) show.date = date;
 		if (image) show.image = image;
+		if (image1) show.image1 = image1;
+		if (image2) show.image2 = image2;
+		if (image3) show.image3 = image3;
 
 		const updatedShow = await show.save();
 		if (updatedShow) res.status(201).json(updatedShow);
