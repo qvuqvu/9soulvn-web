@@ -160,7 +160,7 @@ const ShowPage = ({ history, match }) => {
                 <div>
                   <strong>Nội dung</strong> <br /> {show.description} <br />
                 </div>
-                <img src={show.image1} alt={show.name} title={show.name} />
+                <img src={show.image1} alt={show.name} title={show.name} /> <br />
                 <div>
                   <strong>Người kể chuyện truyền cảm hứng:</strong> <br />{" "}
                   {show.description1} <br />
@@ -173,7 +173,7 @@ const ShowPage = ({ history, match }) => {
                   <strong>*Lưu ý:</strong> <br />{" "}
                   {show.description3} <br />
                 </div>
-                <img src={show.image2} alt={show.name} title={show.name} />
+                <img src={show.image2} alt={show.name} title={show.name} /><br />
                 <img src={show.image3} alt={show.name} title={show.name} />
               </div>
             </Col>
