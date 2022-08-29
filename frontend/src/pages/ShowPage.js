@@ -141,7 +141,7 @@ const ShowPage = ({ history, match }) => {
 
   return (
     <>
-      <Link className="btn btn-all my-2" to="/">
+      <Link className="btn btn-all my-2" to="/storytelling">
         Quay lại
       </Link>
       {show && (!show._id || show._id !== match.params.id) ? (
@@ -155,12 +155,12 @@ const ShowPage = ({ history, match }) => {
           <Meta title={`${show.name}`} />
           <Row class="row justify-content-center">
             <Col>
-              <img
-                
-                src={show.image}
-                alt={show.name}
-                title={show.name}
-              />
+              <div>
+                <img src={show.image} alt={show.name} title={show.name} />
+                <div>
+                  <strong>NỘI DUNG</strong> <br/> {show.description}
+                </div>
+              </div>
             </Col>
             <Col className="col-4">
               {" "}
@@ -177,9 +177,11 @@ const ShowPage = ({ history, match }) => {
                         currency: "vnd",
                       })}
                   </ListGroup.Item>
-                  <ListGroup.Item>
+                  <ListGroup.Item>{show.date}</ListGroup.Item>
+                  <ListGroup.Item>{show.place}</ListGroup.Item>
+                  {/* <ListGroup.Item>
                     <strong>Mô tả:</strong> {show.description}
-                  </ListGroup.Item>
+                  </ListGroup.Item> */}
                 </ListGroup>
               </Col>
               <Col>
@@ -188,9 +190,7 @@ const ShowPage = ({ history, match }) => {
                   <ListGroup variant="flush">
                     <ListGroup.Item>
                       <Row>
-                        <Col>
-                          {show.countInStock > 0 ? "Còn Hàng" : "Hết hàng"}
-                        </Col>
+                        <Col>{show.countInStock > 0 ? "Còn Vé" : "Hết Vé"}</Col>
                       </Row>
                     </ListGroup.Item>
                     {show.countInStock > 0 && (
