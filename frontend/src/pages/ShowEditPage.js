@@ -86,9 +86,14 @@ const ShowEditPage = ({ match, history }) => {
 				setPrice(show.price);
 				setImage(show.image);
 				setImage1(show.image1);
+				setImage2(show.image2);
+				setImage3(show.image3);
 				setBrand(show.brand);
 				setCategory(show.category);
 				setDescription(show.description);
+				setDescription1(show.description1);
+				setDescription2(show.description2);
+				setDescription3(show.description3);
 				setPlace(show.place);
 				setDate(show.date);
 				setCountInStock(show.countInStock);
@@ -107,11 +112,16 @@ const ShowEditPage = ({ match, history }) => {
 				price,
 				category,
 				description,
+				description1,
+				description2,
+				description3,
 				date,
 				place,
 				countInStock,
 				image,
 				image1,
+				image2,
+				image3,
 			})
 		);
 	};
