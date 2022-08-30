@@ -104,7 +104,7 @@ const App = () => {
               component={ProductListPage}
               exact
             />
-
+            <Route path="/admin/product/:id/edit" component={ProductEditPage} />
             <Route
               path="/admin/coachlist"
               exact
