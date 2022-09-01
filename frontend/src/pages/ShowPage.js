@@ -155,29 +155,53 @@ const ShowPage = ({ history, match }) => {
           <Meta title={`${show.name}`} />
           <Row class="row justify-content-center">
             <Col className="overflow-auto">
-            <div className="scrollbar" id="style-3">
-              <div>
-                <img src={show.image} alt={show.name} title={show.name} />
+              <div className="scrollbar" id="style-3">
                 <div>
-                <br /><strong>Nội dung</strong> <br /> {show.description} <br />
+                  <img src={show.image} alt={show.name} title={show.name} />
+                  <div>
+                    <br />
+                    <br />
+                    <strong>Nội dung</strong> <br />
+                    <br /> {show.description} <br />
+                  </div>
+                  {show.image1 == " " ? (
+                    <img src={show.image1} alt={show.name} title={show.name} />
+                  ) : (
+                    ""
+                  )}{" "}
+                  <br />
+                  <div>
+                    {" "}
+                    <br />
+                    <br />
+                    <strong>Người kể chuyện truyền cảm hứng:</strong> <br />
+                    <br /> {show.description1} <br />
+                  </div>
+                  <br />
+                  <div>
+                    <strong>Người hát tình ca:</strong> <br />{" "}
+                    {show.description2} <br />
+                    <br />
+                  </div>
+                  <div>
+                    <strong>*Lưu ý:</strong> <br /> {show.description3} <br />
+                    <br />
+                  </div>
+                  {show.image2 == " " ? (
+                    <img src={show.image2} alt={show.name} title={show.name} />
+                  ) : (
+                    ""
+                  )}{" "}
+                  <br />
+                  <br />
+                  {show.image3 == " " ? (
+                    <img src={show.image3} alt={show.name} title={show.name} />
+                  ) : (
+                    ""
+                  )}{" "}
+                  <br />
                 </div>
-                <img src={show.image1} alt={show.name} title={show.name} /> <br />
-                <div>
-                  <strong>Người kể chuyện truyền cảm hứng:</strong> <br />{" "}
-                  {show.description1} <br />
-                </div>
-                <div>
-                  <strong>Người hát tình ca:</strong> <br />{" "}
-                  {show.description2} <br />
-                </div>
-                <div>
-                  <strong>*Lưu ý:</strong> <br />{" "}
-                  {show.description3} <br />
-                </div>
-                <img src={show.image2} alt={show.name} title={show.name} /><br />
-                <img src={show.image3} alt={show.name} title={show.name} />
               </div>
-             </div>
             </Col>
             <Col className="col-4">
               {" "}
