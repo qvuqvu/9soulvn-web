@@ -160,11 +160,13 @@ const ProductPage = ({ history, match }) => {
           <Meta title={`${product.name}`} />
           <Row class="row justify-content-center">
             <Col>
-              <img
-                src={product.image}
-                alt={product.name}
-                title={product.name}
-              />
+              <div className="scrollbar" id="style-3">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  title={product.name}
+                />
+              </div>
             </Col>
             <Col className="col-4">
               {" "}
