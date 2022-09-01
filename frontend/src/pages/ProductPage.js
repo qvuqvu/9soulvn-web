@@ -166,6 +166,64 @@ const ProductPage = ({ history, match }) => {
                   alt={product.name}
                   title={product.name}
                 />
+
+                <div>
+                  <br />
+                  <strong>
+                    “Tình yêu luôn có cách kể chuyện của riêng nó, chỉ là bạn đã
+                    đủ yên lòng để lắng nghe…”
+                  </strong>{" "}
+                  <br /> <br />
+                  Đó là câu nói quen thuộc mà Minh Đó là câu nói quen thuộc mà
+                  Minh Chính (MC’s) – Người kể chuyện truyền cảm hứng nổi tiếng
+                  với chiếc video triệu view “9show – Người cũ còn thương” đã
+                  dùng để bắt đầu kể những câu chuyện tình mà mình… “không đóng
+                  vai chính”.
+                  <br />
+                  <br />
+                  Đó là câu nói quen thuộc mà Minh “Tôi hay chọn ngồi một mình ở
+                  đâu đó, nhìn mọi người tất bật yêu nhau, rồi ghi ghi và chép
+                  chép. Lúc vui thì thành ra câu chuyện cười khúc khích, khi
+                  buồn thì thành câu chuyện “trong đôi mắt có chứa nửa dòng
+                  sông”… <br /> <br />
+                  Cuốn sách này dành cho những tâm hồn xốn xang: những người đã
+                  vì quá tin mà lạc lối, vì quá sợ mà rút lui, quá hi vọng để
+                  rồi đau đớn, quá hời hợt để vụt mất nhau… nhưng sau cùng vẫn
+                  thật lòng mong đợi một yêu thương khác, có thể sứt mẻ đôi
+                  phần, nhưng vẫn tươi nguyên màu xanh hy vọng. <br /> <br />
+                  “Mình cứ sống cho thiệt đẹp
+                  <br />
+                  <br /> Rồi biết đâu một ngày, người thương sẽ đến <br />
+                  <br />
+                  từ trong những ngày thiệt đẹp đó, <br />
+                  <br />
+                  thì sao?”
+                  <br />
+                  <br /> Cuốn sách này còn dành cho những tâm hồn “không tuổi”,
+                  thích chơi đùa với con chữ, dám làm bạn với nỗi buồn; đặc
+                  biệt, luôn tin vào vẻ đẹp của sự kiên trì và điều diệu kỳ của
+                  tình yêu.
+                  <br />
+                  <br /> Những dáng hình xúc cảm khác nhau của tình yêu được tác
+                  giả cô đọng qua những câu thơ duyên dáng “thích rơi nhịp giữa
+                  đường”, những lời văn tinh nghịch như “đứa trẻ thích chơi trốn
+                  tìm với hạnh phúc”, tất cả ùa vào lòng một cách đáng yêu.{" "}
+                  <br />
+                  <br />
+                  Qua những con chữ đang khiêu vũ, nhảy nhót và hát ca trong “Về
+                  nghe Yêu kể”, bạn sẽ nhận ra cuộc sống này còn thật nhiều điều
+                  thú vị để bật dậy mỗi sớm mai. Và cũng để tin rằng,
+                  <br />
+                  <br />
+                  “chuyện của bạn là thảnh thơi <br />
+                  <br />
+                  chuyện của trời xanh
+                  <br />
+                  <br /> là mang người ta tới…” <br />
+                  <br />
+                  Cảm ơn đã chọn “Về nghe Yêu kể” như một trạm nạp cảm xúc của
+                  đôi lần muốn thảnh thơi tìm tới.
+                </div>
               </div>
             </Col>
             <Col className="col-4">
@@ -185,6 +243,8 @@ const ProductPage = ({ history, match }) => {
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <strong>Mô tả:</strong> {product.description}
+                    <br /> <br />
+                    TRỌNG LƯỢNG  &nbsp;&nbsp;  0.25 kg <br/> KÍCH THƯỚC  &nbsp;&nbsp;&nbsp;&nbsp;   12.5 × 20 × 3 cm
                   </ListGroup.Item>
                 </ListGroup>
               </Col>
