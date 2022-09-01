@@ -165,9 +165,9 @@ const ShowPage = ({ history, match }) => {
                     <br /> {show.description} <br />
                   </div>
                   {show.image1 == " " ? (
-                    <img src={show.image1} alt={show.name} title={show.name} />
+                    " "
                   ) : (
-                    ""
+                    <img src={show.image1} alt={show.name} title={show.name} />
                   )}{" "}
                   <br />
                   <div>
@@ -187,17 +187,13 @@ const ShowPage = ({ history, match }) => {
                     <strong>*Lưu ý:</strong> <br /> {show.description3} <br />
                     <br />
                   </div>
-                  {show.image2 == " " ? (
+                  {show.image2 == " " ? (" ") : (
                     <img src={show.image2} alt={show.name} title={show.name} />
-                  ) : (
-                    ""
                   )}{" "}
                   <br />
                   <br />
-                  {show.image3 == " " ? (
-                    <img src={show.image3} alt={show.name} title={show.name} />
-                  ) : (
-                    ""
+                  {show.image3 == " " ? (" ") : (<img src={show.image3} alt={show.name} title={show.name} />
+                    
                   )}{" "}
                   <br />
                 </div>
