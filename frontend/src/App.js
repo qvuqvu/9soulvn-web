@@ -73,7 +73,7 @@ const App = () => {
             <Route path="/cart/:id?" component={CartPage} />
             <Route path="/user/confirm/:token" component={ConfirmPage} exact />
             <Route path="/blog" component={BlogPage} />
-            <Route path="/blog/:slug" component= {HomePage} />
+            <Route path="/blog/:slug" component={SingleBlog} />
             <Route path="/home" component={HomePage} />
             <Route path="/shipping" component={ShippingPage} />
             <Route path="/payment" component={PaymentPage} />
@@ -105,11 +105,7 @@ const App = () => {
               exact
             />
             <Route path="/admin/product/:id/edit" component={ProductEditPage} />
-            <Route
-              path="/admin/coachlist"
-              exact
-              component={CoachListPage}
-            />
+            <Route path="/admin/coachlist" exact component={CoachListPage} />
             <Route
               path="/admin/coachlist/:pageNumber"
               component={CoachListPage}
