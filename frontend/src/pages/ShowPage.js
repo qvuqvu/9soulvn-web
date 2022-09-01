@@ -154,7 +154,8 @@ const ShowPage = ({ history, match }) => {
         <>
           <Meta title={`${show.name}`} />
           <Row class="row justify-content-center">
-            <Col>
+            <Col className="overflow-auto">
+            <div className="scrollbar" id="style-3">
               <div>
                 <img src={show.image} alt={show.name} title={show.name} />
                 <div>
@@ -176,6 +177,7 @@ const ShowPage = ({ history, match }) => {
                 <img src={show.image2} alt={show.name} title={show.name} /><br />
                 <img src={show.image3} alt={show.name} title={show.name} />
               </div>
+             </div>
             </Col>
             <Col className="col-4">
               {" "}
