@@ -3778,15 +3778,37 @@ fieldset:disabled .btn {
 .btn-danger:hover {
     color: #fff;
     background-color: #c44133;
-    border-color: #b93d30
+  
 }
 
+.btn-youtube {
+    color: #fff;
+    
+
+}
+
+.btn-youtube:hover {
+    color: #c44133;
+    text-decoration: underline;
+}
 .btn-check:focus+.btn-danger,
 .btn-danger:focus {
     color: #fff;
     background-color: #c44133;
     border-color: #b93d30;
     box-shadow: 0 0 0 .25rem rgba(235, 103, 89, .5)
+}
+
+.btn-youtube:focus {
+    color: #c44133;
+    
+
+}
+
+.btn-youtube:active {
+    color: #c44133;
+    
+
 }
 
 .btn-check:active+.btn-danger,
@@ -8672,7 +8694,7 @@ fieldset:disabled .btn {
 }
 
 .gap-5 {
-    gap: 3rem !important
+    gap: 7rem !important
 }
 
 .justify-content-start {
