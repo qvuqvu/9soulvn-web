@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
 import { useDispatch, useSelector } from "react-redux";
 import Product from "../components/Product";
 import Paginate from "../components/Paginate";
@@ -15,6 +16,7 @@ import Introduce from "../components/introduce";
 import IntroduceHome from "../components/introduceHome";
 import Show from "../components/Show";
 import Upcomingshow from "../components/Upcomingshow";
+import YoutubeSection from "../components/YoutubeSection";
 
 const StorytellingPage = ({ match, history }) => {
   const keyword = match.params.keyword; // to search for shows
@@ -270,6 +272,11 @@ const StorytellingPage = ({ match, history }) => {
         )
       )}
       <hr width="100%" align="center" />
+
+      <div className="mb-3"> 
+        <YoutubeSection/>
+        <hr width="100%" align="center" />
+      </div>
       <div className="mt-5 mb-[3%] h2 text-White font-head text-center text">
         Podcast
       </div>
