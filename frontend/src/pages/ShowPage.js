@@ -153,6 +153,7 @@ const ShowPage = ({ history, match }) => {
       ) : show ? (
         <>
           <Meta title={`${show.name}`} />
+          <div className="mt-4">
           <Row class="row justify-content-center">
             <Col className="overflow-auto">
               <div className="scrollbar" id="style-3">
@@ -280,6 +281,7 @@ const ShowPage = ({ history, match }) => {
               </Col>
             </Col>
           </Row>
+          </div>
         </>
       ) : (
         ""
