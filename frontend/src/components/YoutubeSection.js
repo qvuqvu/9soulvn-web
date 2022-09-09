@@ -36,7 +36,7 @@ const Youtube = () => {
         </div>
       </div>
       <div class="row gap-5 justify-content-center">
-        <div class="col-3 align-self-center">
+        <div class="col-2 align-self-center">
           <div class="">
             <Button className="btn-sm" variant="youtube" onClick={() => setIndex((0))}>
               Thảnh thơi thương mình
