@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Product from "../components/Product";
 import Paginate from "../components/Paginate";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Image } from "react-bootstrap";
 import ProductCarousel from "../components/ProductCarousel";
 import Meta from "../components/Meta";
 import { listProducts } from "../actions/productActions";
@@ -14,6 +14,7 @@ import ProductSkeleton from "../components/ProductSkeleton";
 import Introduce from "../components/introduce";
 import IntroduceHome from "../components/introduceHome";
 import Upcomingshow from "../components/Upcomingshow";
+import cart1 from "../assets/cartProduct.svg";
 const HomePage = ({ match, history }) => {
   const keyword = match.params.keyword; // to search for products
   const pageNumber = Number(match.params.pageNumber) || 1; // current page number in the paginated display
@@ -106,7 +107,7 @@ const HomePage = ({ match, history }) => {
         </div>
       </div>
 
-     <Upcomingshow/>
+      <Upcomingshow />
 
       <div className="d-flex justify-content-center mt-5 mb-5">
         <Link className="btn btn-all my-2 px-4 py-2" to="/storytelling">
@@ -139,7 +140,7 @@ const HomePage = ({ match, history }) => {
           </div>
         </div>
       </div>
-
+{/* 
       {error ? (
         <Message dismissible variant="danger" duration={10}>
           {error}
@@ -190,7 +191,50 @@ const HomePage = ({ match, history }) => {
             })}
           </Row>
         )
-      )}
+      )} */}
+
+      <div className="container">
+        <Link to={`/product/62c8fcf0bfcca408407965ac`}>
+          <div className="d-flex flex-row cardUp justify-content-center ms-6 ">
+            <div className=" row card-body ">
+              <div className="col-auto">
+                <img
+                  className=" card-img-top"
+                  src="https://i.imgur.com/byMMlIe.jpg"
+                  alt="coaching"
+                />
+              </div>
+              <div className="row col-6 pt-4 ms-2">
+                <div className=""> <strong>SÁCH VỀ NGHE YÊU KỂ</strong></div>
+
+                <div className="align-self-start">
+                  [PHIÊN BẢN GIỚI HẠN] Tặng kèm BOOKMARK Về nghe Yêu kể LỜI CHÚC kèm CHỮ KÝ từ anh MC’s
+                </div>
+
+                <div className=" align-self-end">
+                  <div className="row gap-5">
+                    <div className="col h4 fs-3 ">99.000đ</div>
+                    <div className="col-2">
+                      <Link to={`/product/62c8fcf0bfcca408407965ac`}>
+                        <Image
+                          rounded
+                          style={{
+                            marginTop: "10px",
+                            width: "40px",
+                            height: "40px",
+                            
+                          }}
+                          src={cart1}
+                        />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </div>
 
       <div className="d-flex justify-content-center mt-5 mb-5">
         <Link className="btn btn-all my-2 px-4 py-2" to="/gifting">
@@ -205,7 +249,7 @@ const HomePage = ({ match, history }) => {
           <div className="d-flex flex-column  align-items-center ml-">
             <div className="mb-2 h2">Coaching</div>
             <p className="mb-2 mt-3 text-center">
-              Những cuộc chuyện trò cơi nới tư duy và vỗ về cảm xúc, <br/> trên
+              Những cuộc chuyện trò cơi nới tư duy và vỗ về cảm xúc, <br /> trên
               hành trình trân trọng, nâng niu và khai sáng chính mình
             </p>
           </div>
@@ -223,7 +267,7 @@ const HomePage = ({ match, history }) => {
                   alt="coaching"
                 />
               </div>
-              <div className="col-6 pt-4 ms-2">
+              <div className="col-6 row pt-4 ms-2">
                 <div className="row justify-content-between">
                   <div className="col-auto">title</div>
                   <div className="col-auto">19h00 | 27/8/2022</div>
@@ -241,7 +285,7 @@ const HomePage = ({ match, history }) => {
                   </div>
                 </div>
 
-                <div className="row mt-5">
+                <div className="align-self-end">
                   <div className="col ">
                     <a href="#" class="cardUp-link">
                       Xem chi tiết
