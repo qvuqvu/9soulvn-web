@@ -135,7 +135,7 @@ const StorytellingPage = ({ match, history }) => {
 
       <Upcomingshow/>
 
-      <div className="w-full">
+      {/* <div className="w-full">
         <div className="container">
           <div className="d-flex flex-column  align-items-center justify-content-center">
             <div className="fs-5 ">ĐÊM KỂ CHUYỆN THẢNH THƠI</div>
@@ -194,7 +194,7 @@ const StorytellingPage = ({ match, history }) => {
             })}
           </Row>
         )
-      )}
+      )} */}
 
       <hr width="100%" align="center" />
 
