@@ -106,7 +106,7 @@ const Gifting = ({ match, history }) => {
       <div className="">
         <div className="container">
           <div className="d-flex flex-column  align-items-center justify-content-center mb-5">
-            <h1 className="mb-2">Tất sản phẩm</h1>
+            <h1 className="mb-2">Tất cả sản phẩm</h1>
             <p className="mb-2">
               9 giờ tối, một vài đêm trong tuần, bạn cho mình cái quyền được cô
               đơn để gặm nhắm vài thứ gia vị mới.
