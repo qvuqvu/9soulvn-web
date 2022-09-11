@@ -26,15 +26,15 @@ import {
 } from '../constants/coachConstants';
 
 // list COACHs based on keyword and paginated page number
-export const coachListReducer = (state = { coach: [] }, action) => {
+export const coachListReducer = (state = { coachs: [] }, action) => {
 	switch (action.type) {
 		case COACH_LIST_REQUEST:
-			return { loading: true, coach: [] };
+			return { loading: true, coachs: [] };
 
 		case COACH_LIST_SUCCESS:
 			return {
 				loading: false,
-				coach: action.payload.coach,
+				coachs: action.payload.coachs,
 				page: action.payload.page,
 				pages: action.payload.pages,
 			};
@@ -56,7 +56,7 @@ export const coachDetailsReducer = (
 		case COACH_DETAILS_REQUEST:
 			return { loading: true, ...state };
 		case COACH_DETAILS_SUCCESS:
-			return { loading: false, COACH: action.payload };
+			return { loading: false, coach: action.payload };
 		case COACH_DETAILS_FAILURE:
 			return { loading: false, error: action.payload };
 		default:
