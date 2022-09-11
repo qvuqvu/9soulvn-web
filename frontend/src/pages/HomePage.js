@@ -262,7 +262,7 @@ const HomePage = ({ match, history }) => {
             <div className=" row card-body ">
               <div className="col-auto">
                 <img
-                  className=" img-fluid"
+                  className=" card-img-top"
                   src="https://i.imgur.com/Ip0xAZT.jpg"
                   alt="coaching"
                 />
@@ -284,7 +284,6 @@ const HomePage = ({ match, history }) => {
                     do amet sint
                   </div>
                 </div>
-
                 <div className="align-self-end">
                   <div className="col ">
                     <a href="#" class="cardUp-link">
