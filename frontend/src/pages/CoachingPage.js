@@ -18,7 +18,7 @@ const CoachingPage = ({ match, history }) => {
   const keyword = match.params.keyword; // to search for products
   const pageNumber = Number(match.params.pageNumber) || 1; // current page number in the paginated display
   const [promptVerfication, setPromptVerification] = useState(false); // prompt user to verify email if not yet confirmed
-  const [coach, setCoach] = useState(null);
+  const [coachs, setCoach] = useState(null);
   const [coachAvailable, setCoachAvailable] = useState(false);
   const dispatch = useDispatch();
 
@@ -51,10 +51,10 @@ const CoachingPage = ({ match, history }) => {
 
   // set a state variable to true or false depending on if coachs is avialable in the state
   useEffect(() => {
-    if (coach) {
-      coach.length ? setCoachAvailable(true) : setCoachAvailable(false);
+    if (coachs) {
+      coachs.length ? setCoachAvailable(true) : setCoachAvailable(false);
     }
-  }, [coach]);
+  }, [coachs]);
 
   // fetch products from redux store into local state
   useEffect(() => {
@@ -227,6 +227,59 @@ const CoachingPage = ({ match, history }) => {
           </div>
         </Link>
       </div>
+
+
+      {error ? (
+        <Message dismissible variant="danger" duration={10}>
+          {error}
+        </Message>
+      ) : !loading && coachs ? (
+        <>
+          <Row>
+            {coachs.length
+              ? coachs.map((coach) => {
+                  return (
+                    <Col sm={12} md={6} lg={4} xl={3} key={coach._id}>
+                      <Coach coach={coach} />
+                    </Col>
+                  );
+                })
+              : keyword &&
+                !coachAvailable && (
+                  //   show this only if user has searched for some item and it is not available
+                  <Col className="text-center">
+                    <div>
+                      <i className="far fa-frown" /> No items found for this
+                      search query
+                    </div>
+                    Go Back to the <Link to="/">Home Page</Link>
+                  </Col>
+                )}
+          </Row>
+          <Paginate
+            className="mt-auto text-center"
+            page={pageNumber}
+            keyword={keyword ? keyword : ""}
+            pages={pages}
+          />
+        </>
+      ) : (
+        loading &&
+        coachs &&
+        coachs.length === 0 && (
+          <Row>
+            {[1, 2, 3, 4].map((ele) => {
+              return (
+                <Col sm={12} md={6} lg={4} xl={3} key={ele}>
+                  <div>
+                    <ProductSkeleton />
+                  </div>
+                </Col>
+              );
+            })}
+          </Row>
+        )
+      )}
     </>
   );
 };
