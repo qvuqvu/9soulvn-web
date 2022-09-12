@@ -257,7 +257,7 @@ const HomePage = ({ match, history }) => {
       </div>
 
       <div className="container">
-        <Link to={`/show/62d391680785c8536c0b0f38`}>
+        <Link to={`/coach/62e92154df94c24f6412f3ad`}>
           <div className="d-flex flex-row cardUp justify-content-center ms-6 ">
             <div className=" row card-body ">
               <div className="col-auto">
