@@ -72,6 +72,16 @@ const createCoach = asyncHandler(async (req, res) => {
 		user: req.user._id,
 		image: '/images/alexa.jpg',
 		description: 'Sample description',
+		description1: 'Sample description',
+		description2: 'Sample description',
+		description3: 'Sample description',
+		image1: '/images/alexa.jpg',
+		image2: '/images/alexa.jpg',
+		image3: '/images/alexa.jpg',
+		date: 'date',
+		place: 'place',
+		duration: 'duration'
+
 	});
 	const createdCoach = await coach.save();
 	res.status(201).json(createdCoach);
@@ -89,7 +99,16 @@ const updateCoach = asyncHandler(async (req, res) => {
 		numReviews,
 		countInStock,
 		description,
+		description1,
+		description2,
+		description3,
+		date,
+		place,
 		image,
+		image1,
+		image2,
+		image3,
+		duration
 	} = req.body;
 	const coach = await Coach.findById(req.params.id);
 
@@ -102,8 +121,16 @@ const updateCoach = asyncHandler(async (req, res) => {
 		if (numReviews) coach.numReviews = numReviews;
 		if (countInStock) coach.countInStock = countInStock;
 		if (description) coach.description = description;
+		if (description1) coach.description1 = description1;
+		if (description2) coach.description2 = description2;
+		if (description3) coach.description3 = description3;
 		if (image) coach.image = image;
-
+		if (image1) coach.image1 = image1;
+		if (image2) coach.image2 = image2;
+		if (image3) coach.image3 = image3;
+		if (place) coach.place = place;
+		if (date) coach.date = date;
+		if (duration) coach.duration = duration;
 		const updatedCoach = await coach.save();
 		if (updatedCoach) res.status(201).json(updatedCoach);
 	} else {
