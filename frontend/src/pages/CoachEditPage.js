@@ -21,7 +21,15 @@ const CoachEditPage = ({ match, history }) => {
 	const [image, setImage] = useState('');
 	const [price, setPrice] = useState(0.0);
 	const [countInStock, setCountInStock] = useState(0);
-
+	const [description1, setDescription1] = useState('');
+	const [description2, setDescription2] = useState('');
+	const [description3, setDescription3] = useState('');
+	const [place, setPlace] = useState('');
+	const [date, setDate] = useState('');
+	const [image3, setImage3] = useState('');
+	const [image2, setImage2] = useState('');
+	const [image1, setImage1] = useState('');
+	const [duration, setDuration] = useState('');
 	// to upload coach image
 	const [uploading, setUploading] = useState(false);
 	const [errorImageUpload, setErrorImageUpload] = useState('');
@@ -81,6 +89,17 @@ const CoachEditPage = ({ match, history }) => {
 				setCategory(coach.category);
 				setDescription(coach.description);
 				setCountInStock(coach.countInStock);
+				setImage1(coach.image1);
+				setImage2(coach.image2);
+				setImage3(coach.image3);
+				setBrand(coach.brand);
+				setCategory(coach.category);
+				setDescription1(coach.description1);
+				setDescription2(coach.description2);
+				setDescription3(coach.description3);
+				setPlace(coach.place);
+				setDate(coach.date);
+				setDuration(coach.duration)
 			}
 		}
 	}, [coach, dispatch, coachId, history, successUpdate]);
@@ -96,8 +115,17 @@ const CoachEditPage = ({ match, history }) => {
 				price,
 				category,
 				description,
+				description1,
+				description2,
+				description3,
+				date,
+				place,
 				countInStock,
+				duration,
 				image,
+				image1,
+				image2,
+				image3,
 			})
 		);
 	};
@@ -298,6 +326,54 @@ const CoachEditPage = ({ match, history }) => {
 										/>
 									</FloatingLabel>
 								</Form.Group>
+								<Form.Group controlId='date'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Duration'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter place URL'
+											type='text'
+											value={duration}
+											onChange={(e) =>
+												setDuration(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='date'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Date'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter place URL'
+											type='text'
+											value={date}
+											onChange={(e) =>
+												setDate(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='place'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Place'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter place URL'
+											type='text'
+											value={place}
+											onChange={(e) =>
+												setPlace(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
 								<Form.Group controlId='description'>
 									<FloatingLabel
 										controlId='descinput'
@@ -310,6 +386,102 @@ const CoachEditPage = ({ match, history }) => {
 											value={description}
 											onChange={(e) =>
 												setDescription(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='description'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Description 2'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter description'
+											type='text'
+											value={description1}
+											onChange={(e) =>
+												setDescription1(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='description'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Description 3'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter description'
+											type='text'
+											value={description2}
+											onChange={(e) =>
+												setDescription2(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='description'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Description 4'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter description'
+											type='text'
+											value={description3}
+											onChange={(e) =>
+												setDescription3(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='image1'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Image 2'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter description URL'
+											type='text'
+											value={image1}
+											onChange={(e) =>
+												setImage1(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='image1'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Image 3'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter description URL'
+											type='text'
+											value={image2}
+											onChange={(e) =>
+												setImage2(e.target.value)
+											}
+										/>
+									</FloatingLabel>
+								</Form.Group>
+								<Form.Group controlId='image1'>
+									<FloatingLabel
+										controlId='descinput'
+										label='Image 4'
+										className='mb-3'>
+										<Form.Control
+											size='lg'
+											placeholder='Enter description URL'
+											type='text'
+											value={image3}
+											onChange={(e) =>
+												setImage3(e.target.value)
 											}
 										/>
 									</FloatingLabel>
