@@ -150,19 +150,19 @@ const CoachingPage = ({ match, history }) => {
             <div className=" row card-body ">
               <div className="col-auto">
                 <img
-                  className=" img-fluid"
-                  src="https://i.imgur.com/Ip0xAZT.jpg"
+                  className=" card-img-top"
+                  src="https://i.imgur.com/Ni7Uxuz.png"
                   alt="coaching"
                 />
               </div>
               <div className="col-6">
                 <div className="row justify-content-between">
-                  <div className="col-auto">title</div>
+                  
                   <div className="col-auto">19h00 | 27/8/2022</div>
                 </div>
                 <hr width="100%" align="center" />
                 <div className="row ">
-                  <div className="col-auto  h7">
+                  <div className="col-auto h7">
                     KHOÁ HỌC PUBLIC SPEAKING THUYẾT PHỤC VÀ CẢM XÚC
                   </div>
                 </div>
@@ -192,14 +192,14 @@ const CoachingPage = ({ match, history }) => {
             <div className=" row card-body ">
               <div className="col-auto">
                 <img
-                  className=" img-fluid"
+                  className="  card-img-top"
                   src="https://i.imgur.com/Ip0xAZT.jpg"
                   alt="coaching"
                 />
               </div>
               <div className="col-6">
                 <div className="row justify-content-between">
-                  <div className="col-auto">title</div>
+                  
                   <div className="col-auto">19h00 | 27/8/2022</div>
                 </div>
                 <hr width="100%" align="center" />
