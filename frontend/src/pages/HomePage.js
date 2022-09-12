@@ -263,13 +263,13 @@ const HomePage = ({ match, history }) => {
               <div className="col-auto">
                 <img
                   className=" card-img-top"
-                  src="https://i.imgur.com/Ip0xAZT.jpg"
+                  src="https://i.imgur.com/Ni7Uxuz.png"
                   alt="coaching"
                 />
               </div>
               <div className="col-6 row pt-4 ms-2">
                 <div className="row justify-content-between">
-                  <div className="col-auto">title</div>
+                
                   <div className="col-auto">19h00 | 27/8/2022</div>
                 </div>
                 <hr width="100%" align="center" />
