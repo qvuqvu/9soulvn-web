@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
 import sanityClient from "../client"
-import BlockContent from "@sanity/block-content-to-react"
+import SanityBlockContent from "@sanity/block-content-to-react"
 
 export default function SingleBlog() {
   const [singlePost, setSinglePost] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const { slug } = useParams()
+  const {slug} = useParams()
 
   useEffect(() => {
     sanityClient
@@ -49,7 +49,7 @@ export default function SingleBlog() {
           <p>By Thomas Sankara</p>
 
           <div className="block__content">
-            <BlockContent
+            <SanityBlockContent
               blocks={singlePost.body}
               projectId="511tg0cm"
               dataset="production"
