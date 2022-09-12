@@ -187,7 +187,7 @@ const CoachingPage = ({ match, history }) => {
       </div>
 
       <div className="container">
-        <Link to={`/coach/62e9528527ef1a0f588bb089`}>
+        <Link to={`/coach/631e8d58cd71030004ebcdb2`}>
           <div className="d-flex flex-row cardUp justify-content-center ms-6 ">
             <div className=" row card-body ">
               <div className="col-auto">
@@ -229,7 +229,7 @@ const CoachingPage = ({ match, history }) => {
       </div>
 
 
-      {error ? (
+      {/* {error ? (
         <Message dismissible variant="danger" duration={10}>
           {error}
         </Message>
@@ -279,7 +279,7 @@ const CoachingPage = ({ match, history }) => {
             })}
           </Row>
         )
-      )}
+      )} */}
     </>
   );
 };
