@@ -158,13 +158,49 @@ const CoachPage = ({ history, match }) => {
       ) : coach ? (
         <>
           <Meta title={`${coach.name}`} />
+          <div className="mt-4">
           <Row class="row justify-content-center">
-            <Col>
-              <ImageMagnifier
-                src={coach.image}
-                alt={coach.name}
-                title={coach.name}
-              />
+            <Col className="overflow-auto">
+              <div className="scrollbar" id="style-3">
+                <div>
+                  <img src={coach.image} alt={coach.name} title={coach.name} />
+                  <div>
+                    <br />
+                    <br />
+                    <strong>Nội dung</strong> <br />
+                    <br /> {coach.description} <br />
+                  </div>
+                  {(coach.image1 == null) ? null : (
+                    <img src={coach.image1} alt={coach.name} title={coach.name} />
+                  )}{" "}
+                  <br />
+                  <div>
+                    {" "}
+                    <br />
+                    <br />
+                    <br /> {coach.description1} <br />
+                  </div>
+                  <br />
+                  <div>
+                   
+                    {coach.description2} <br />
+                    <br />
+                  </div>
+                  <div>
+                    <strong>*Lưu ý:</strong> <br /> {coach.description3} <br />
+                    <br />
+                  </div>
+                  {(coach.image2 == null) ? null : (
+                    <img src={coach.image2} alt={coach.name} title={coach.name} />
+                  )}{" "}
+                  <br />
+                  <br />
+                  {(coach.image3 == null) ? null : (<img src={coach.image3} alt={coach.name} title={coach.name} />
+                    
+                  )}{" "}
+                  <br />
+                </div>
+              </div>
             </Col>
             <Col className="col-4">
               {" "}
@@ -174,16 +210,21 @@ const CoachPage = ({ history, match }) => {
                     <h7>{coach.name}</h7>
                   </ListGroup.Item>
                   <ListGroup.Item className="h4">
-                    {coach.price &&
-                      coach.price.toLocaleString("en-VI", {
-                        maximumFractionDigits: 2,
-                        style: "currency",
-                        currency: "vnd",
-                      })}
+                    {coach.countInStock > 0
+                      ? coach.price &&
+                        coach.price.toLocaleString("en-VI", {
+                          maximumFractionDigits: 2,
+                          style: "currency",
+                          currency: "vnd",
+                        })
+                      : "ĐÓNG ĐĂNG KÝ"}
                   </ListGroup.Item>
-                  <ListGroup.Item>
+				  <ListGroup.Item>Thời lượng: {coach.duration}</ListGroup.Item>
+                  <ListGroup.Item> Ngày bắt đầu: {coach.date}</ListGroup.Item>
+                  <ListGroup.Item>{coach.place}</ListGroup.Item>
+                  {/* <ListGroup.Item>
                     <strong>Mô tả:</strong> {coach.description}
-                  </ListGroup.Item>
+                  </ListGroup.Item> */}
                 </ListGroup>
               </Col>
               <Col>
@@ -191,11 +232,9 @@ const CoachPage = ({ history, match }) => {
                   <ListGroup variant="flush"></ListGroup>
                   <ListGroup variant="flush">
                     <ListGroup.Item>
-                      <Row>
-                        <Col>
-                          {coach.countInStock > 0 ? "Còn Hàng" : "Hết hàng"}
-                        </Col>
-                      </Row>
+                      {/* <Row>
+                        <Col>{coach.countInStock > 0 ? "Còn Vé" : "Hết Vé"}</Col>
+                      </Row> */}
                     </ListGroup.Item>
                     {coach.countInStock > 0 && (
                       <ListGroup.Item>
@@ -247,6 +286,7 @@ const CoachPage = ({ history, match }) => {
               </Col>
             </Col>
           </Row>
+          </div>
 				</>
 			) : (
 				''
