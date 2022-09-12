@@ -13,8 +13,8 @@ import SearchBox from "../components/SearchBox";
 import ProductSkeleton from "../components/ProductSkeleton";
 import Introduce from "../components/introduce";
 import IntroduceHome from "../components/introduceHome";
-import sanityClient from "../client";
-const BlogPage = ({ match, history }) => {
+import client from "../client";
+export default function BlogPage() {
   // get the products list, userinfo and user details form the redix store
   const productList = useSelector((state) => state.productList);
   let { loading, error, pages } = productList;
@@ -71,10 +71,9 @@ const BlogPage = ({ match, history }) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    sanityClient
+    client
       .fetch(
         `*[_type == "post"] {
-        category,
         title,
         slug,
         body,
@@ -90,6 +89,7 @@ const BlogPage = ({ match, history }) => {
       .then((data) => setPosts(data))
       .catch(console.error);
   }, []);
+
   return (
     <>
       <section className="px-5 2xl:max-w-7xl 2xl:mx-auto">
@@ -103,24 +103,25 @@ const BlogPage = ({ match, history }) => {
         </div>
         <Row>
           {posts.map((post) => (
-            <Col sm={12} md={6} lg={4} xl={3}>
-               <Link
-                    to={"/blog/" + post.slug.current}
-                    className="py-2 px-6 rounded shadow text-white bg-black hover:bg-transparent border-2 border-black transition-all duration-500 hover:text-black font-bold"
-                  >
-                    <article key={post.slug.current}>
-                <img src={post.mainImage.asset.url} alt={post.title} />
-                <strong className="text-xl mt-2 fs-6">{post.title}</strong>
-                <p>{post.tilte}</p>
-                
-              </article> </Link>
-              
+            <Col sm={12} md={6} lg={4} xl={3}> 
+              <Link
+                to={`/blog/${post.slug.current}`}
+                className="py-2 px-6 rounded shadow text-white bg-black hover:bg-transparent border-2 border-black transition-all duration-500 hover:text-black font-bold"
+              >
+                <article key={post.slug.current}>
+                  <img
+                    className="card-img-top mb-3"
+                    src={post.mainImage.asset.url}
+                    alt={post.title}
+                  />
+                  <div className="text-xl  fs-6">{post.title}</div> 
+                  <p>{post.tilte}</p>
+                </article>{" "}
+              </Link>
             </Col>
           ))}
         </Row>
       </section>
     </>
   );
-};
-
-export default BlogPage;
+}
