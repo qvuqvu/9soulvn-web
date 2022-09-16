@@ -140,7 +140,7 @@ const HomePage = ({ match, history }) => {
           </div>
         </div>
       </div>
-{/* 
+
       {error ? (
         <Message dismissible variant="danger" duration={10}>
           {error}
@@ -191,50 +191,9 @@ const HomePage = ({ match, history }) => {
             })}
           </Row>
         )
-      )} */}
+      )}
 
-      <div className="container">
-        <Link to={`/product/62c8fcf0bfcca408407965ac`}>
-          <div className="d-flex flex-row cardUp justify-content-center ms-6 ">
-            <div className=" row card-body ">
-              <div className="col-auto">
-                <img
-                  className=" card-img-top"
-                  src="https://i.imgur.com/byMMlIe.jpg"
-                  alt="coaching"
-                />
-              </div>
-              <div className="row col-6 pt-4 ms-2">
-                <div className=""> <strong>SÁCH VỀ NGHE YÊU KỂ</strong></div>
-
-                <div className="align-self-start">
-                  [PHIÊN BẢN GIỚI HẠN] Tặng kèm BOOKMARK Về nghe Yêu kể LỜI CHÚC kèm CHỮ KÝ từ anh MC’s
-                </div>
-
-                <div className=" align-self-end">
-                  <div className="row gap-5">
-                    <div className="col h4 fs-3 ">99.000đ</div>
-                    <div className="col-2">
-                      <Link to={`/product/62c8fcf0bfcca408407965ac`}>
-                        <Image
-                          rounded
-                          style={{
-                            marginTop: "10px",
-                            width: "40px",
-                            height: "40px",
-                            
-                          }}
-                          src={cart1}
-                        />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Link>
-      </div>
+  
 
       <div className="d-flex justify-content-center mt-5 mb-5">
         <Link className="btn btn-all my-2 px-4 py-2" to="/gifting">
